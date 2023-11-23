@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
 
     * {
         cursor: none;
@@ -123,129 +123,7 @@
     }
 }
 
-@media only screen and (min-width: 601px) and (max-width: 759px) {
 
-    * {
-        cursor: none;
-    }
-        /* header */
-
-        header nav {
-            display: none;
-        }
-    
-        header section.responsive {
-            width: 40px;
-            height: 50px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            z-index: 999;
-        }
-    
-        header section.responsive hr {
-            width: 80%;
-            height: 2px;
-            background-color: black;
-            color: black;
-            outline: none;
-            border: none;
-            transition-duration: .8s;
-        }
-    
-        header section.responsive hr.b2 {
-            transition-duration: .2s;
-        }
-    
-        header section.responsive hr.b1active {
-            position: absolute;
-            top: 25%;
-            left: 50%;
-            transform: translate(-50%, -50%) rotate(45deg);
-        }
-    
-        header section.responsive hr.b2active {
-            opacity: 0;
-        }
-    
-        header section.responsive hr.b3active {
-            position: absolute;
-            top: 25%;
-            left: 50%;
-            transform: translate(-50%, -50%) rotate(-45deg);
-        }
-    
-        header section.responsive aside {
-            position: relative;
-        }
-    
-        header section.responsive span.h1 {
-            position: absolute;
-            top: 25%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-    
-        /* menu */
-    
-        section.menu {
-            position: fixed;
-            inset: 0;
-            left: 100%;
-            transition-duration: .6s;
-            z-index: 888;
-            background-color: #CCAA81;
-            width: 25vw;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.288);
-            border-radius: 15px 0px 0px 15px;
-            text-align: justify;
-        }
-    
-    
-        section.menuactive {
-            position: fixed;
-            inset: 0;
-            left: calc(100% - 25vw);
-        }
-    
-        body {
-            overflow-x: hidden;
-        }
-    
-        section.menu menu {
-            display: flex;
-            justify-content: center;
-            width: 100%;
-            flex-direction: column;
-            gap: 10px;
-            margin-top: calc(50% - 3vh);
-        }
-    
-        section.menu menu a {
-            text-decoration: none;
-            font-family: var(--poppins);
-            color: rgb(61, 61, 61);
-            transition: .8s ease-in-out;
-        }
-
-        section.menu menu a:hover {
-            color: rgb(32, 32, 32);
-        }
-
-        section#ingredientes aside.all div.cards div.card {
-            width: 200px;
-            height: 260px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.178);
-            border-radius: 20px;
-            scale: 1;
-            transition-duration: .6s;
-            cursor: none;
-        }
-    
-        section#ingredientes aside.all div.cards div.card:hover  {
-            scale: 1.035;
-        }
-}
 
 @media only screen and (min-width: 760px) and (max-width: 999px)  {
 

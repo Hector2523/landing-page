@@ -1,6 +1,7 @@
 @charset "UTF-8";
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@600&family=Noto+Serif:ital,wght@1,100&display=swap');
 
 * {
     user-select: none;
@@ -8,10 +9,26 @@
     scroll-behavior: smooth;
 }
 
+@layer reset {
+
+    body,
+    html {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+@layer config {
+    body {
+        background-color: #F7EBDB;
+    }
+}
+
 @layer variaveis {
 
     :root {
         --poppins: Poppins;
+        --fontedois: 'Crimson Text';
     }
 }
 
@@ -62,6 +79,17 @@
             display: flex;
             gap: 20px;
             margin-right: 0px;
+            animation: fly .8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        @keyframes fly {
+            from {
+                transform: translateX(100vw);
+            }
+
+            to {
+                transform: translateX(0vw);
+            }
         }
 
         header nav a {
@@ -90,22 +118,141 @@
     }
 
     @layer home {
-        section#home{
+        section#home {
             display: flex;
             justify-content: center;
             overflow-x: hidden;
+            height: 120vh;
         }
 
-        
+
     }
 
-    @layer sobre {}
+    @layer sobre {
+        section#sobre {
+            display: flex;
+            overflow-x: hidden;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        section#sobre h1 {
+            font-family: var(--poppins);
+            font-weight: 600;
+            font-size: 3em;
+            text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.380);
+        }
+
+        section#sobre p {
+            font-weight: bolder;
+            font-size: 30px;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            width: 90%;
+            text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.280);
+        }
+
+        section#sobre section.apresentaçao {
+            background: #FAEADA;
+            height: 95vh;
+            width: 100%;
+        }
+
+        section#sobre section.apresentaçao aside.img {
+            float: left;
+            max-width: 45%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: 35px;
+        }
+
+        section#sobre section.apresentaçao aside.img img {
+            border-radius: 20px;
+            object-fit: cover;
+            object-position: right center;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.292);
+        }
+
+        section#sobre section.apresentaçao aside.conteudo {
+            float: right;
+            max-width: 45%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: 35px;
+        }
+
+        @layer animações {
+            @layer h1 {
+
+                @layer primeiro {
+                    section#sobre section.apresentaçao aside.img h1 {
+                        transform: translateX(-100vw);
+                        transition: .6s ease-in-out;
+                    }
+
+                    section#sobre section.visible aside.img h1 {
+                        transform: translateX(0vw);
+                    }
+                }
+
+                @layer segundo {
+                    section#sobre section.apresentaçao aside.conteudo h1 {
+                        opacity: 0;
+                        transform: translateY(45%);
+                        transition: 4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                    }
+
+                    section#sobre section.visible aside.conteudo h1 {
+                        opacity: 1;
+                        transform: translateY(0);
+                    }
+                }
+
+                @layer img {
+                    section#sobre section.apresentaçao aside.img img {
+                        opacity: 0;
+                        transition: 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                    }
+
+                    section#sobre section.visible aside.img img {
+                        opacity: 1;
+                    }
+                }
+
+            }
+
+            @layer p {
+                section#sobre section.apresentaçao aside.conteudo p {
+                    font-family: var(--fontedois);
+                    transform: translateX(100vw);
+                    transition: .6s ease-in-out;
+                }
+
+                section#sobre section.visible aside.conteudo p {
+                    transform: translateX(0vw);
+                }
+            }
+        }
+    }
+
 
     @layer ingredientes {
-        section#ingredientes{
+        section#ingredientes {
             display: flex;
             justify-content: center;
             overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        section#ingredientes h1 {
+            font-family: var(--poppins);
+            font-size: 2em;
+            margin-left: 20%;
+            text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.380);
         }
 
         section#ingredientes aside.all {
@@ -126,14 +273,63 @@
             height: 350px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.178);
             border-radius: 20px;
-            scale: 1;
-            transition-duration: .6s;
+            display: flex;
+            justify-content: center;
+            transition-duration: 0.6s;
         }
-        
-        section#ingredientes aside.all div.cards div.card:hover  {
-            scale: 1.035;
+
+        section#ingredientes aside.all div.cards div.card:hover {
+            transform: scale(1.035);
+        }
+
+        section#ingredientes aside.all div.cards div.card>section {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        section#ingredientes aside.all div.cards div.card aside.img {
+            width: 90%;
+            height: 45%;
+            text-align: center;
+            margin-top: 5%;
+        }
+
+        section#ingredientes aside.all div.cards div.card aside.img img {
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.112);
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
+            object-fit: cover;
+            transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+            object-position: center top;
+        }
+
+        section#ingredientes aside.all div.cards div.card:hover aside.img img {
+            object-position: center center;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.412);
+        }
+
+        section#ingredientes aside.all div.cards div.card aside.leite img {
+            object-position: top right;
+        }
+
+        section#ingredientes aside.all div.cards div.card:hover aside.leite img {
+            object-position: center right;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.412);
+        }
+
+        section#ingredientes aside.all div.cards div.card aside.whey img {
+            object-position: center top;
+        }
+
+        section#ingredientes aside.all div.cards div.card:hover aside.whey img {
+            object-position: center bottom;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.412);
         }
     }
+
 
     @layer participantes {}
 }
@@ -142,7 +338,7 @@
     div.back {
         height: 60px;
         width: 60px;
-        background-color: #EFC897;
+        background-color: #e6b982;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -155,6 +351,7 @@
         animation-timeline: scroll();
         opacity: 0;
         animation-range: cover 4% 20%;
+        cursor: pointer;
     }
 
     div.back span {
@@ -174,6 +371,25 @@
 
         to {
             opacity: 1;
+        }
+    }
+}
+
+@layer participantes {
+    @layer p {
+        section#participantes p {
+            font-size: 30px;
+            font-family: var(--fontedois);
+            align-items: center;
+        }
+    }
+
+    @layer h1 {
+        section#participantes h1 {
+            font-size: 50px;    
+            font-family: var(--poppins);
+            font-weight: 600;
+            align-items: center;
         }
     }
 }
