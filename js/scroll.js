@@ -54,3 +54,24 @@ function adicionarClasseQuandoVisivel() {
 window.addEventListener('load', adicionarClasseQuandoVisivel);
 window.addEventListener('scroll', adicionarClasseQuandoVisivel);
 
+function ingredientesVisivel() {
+    const secaoObservada = document.querySelector('#ingredientes');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                
+                secaoObservada.classList.add('visible');
+            } else {
+                secaoObservada.classList.remove('visible');
+            }
+        });
+    });
+
+    observer.observe(secaoObservada);
+}
+
+window.addEventListener('load', ingredientesVisivel);
+window.addEventListener('scroll', ingredientesVisivel);
+
+

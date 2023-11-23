@@ -108,12 +108,38 @@
 
 }
 
+@layer lido {
+    div.lido {
+        position: fixed;
+        inset: 0;
+        transform-origin: left;
+        scale: 1 1;
+        background-color: #ddaa77;
+        height: 25px;
+        box-shadow: -5px 0px 10px rgba(0, 0, 0, 0.297);
+        animation: lido 1s forwards;
+        animation-timeline: scroll();
+        animation-range: cover 0% 100%;
+    }
+
+    @keyframes lido {
+        from {
+            scale: 0 1;
+        }
+
+        to {
+            scale: 1 1;
+        }
+    }
+}
+
 
 @layer main {
 
     @layer config {
         main {
             overflow-x: hidden;
+            padding-block: 25px;
         }
     }
 
@@ -280,6 +306,7 @@
 
         section#ingredientes aside.all div.cards div.card:hover {
             transform: scale(1.035);
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.278);
         }
 
         section#ingredientes aside.all div.cards div.card>section {
@@ -392,7 +419,7 @@
             align-items: center;
             justify-content: center;
             width: 100%;
-            height: 100%
+            height: 100%;
         }
     }
 }
