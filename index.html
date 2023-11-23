@@ -6,11 +6,14 @@
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/normalize.css">
     <link rel="stylesheet" href="style/media.css">
-    <title>Super Lanches</title>
+    <link rel="shortcut icon" href="favicon/king lunch.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>King Lunch</title>
 </head>
 <body>
     <header>
-        <section class="pc"></section>
+
+        <section class="logo"></section>
 
         <nav>
             <a href="#" onclick="home()">Home</a>
@@ -28,7 +31,7 @@
             </aside>
         </section>
 
-        
+
     </header>
 
     <section class="menu">
@@ -40,13 +43,39 @@
         </menu>
     </section>
 
-    <section id="home"></section>
+    
+    <main>
 
-    <section id="sobre"></section>
+        <section id="home">
+            <h1>Home</h1>
+        </section>
 
-    <section id="ingredientes"></section>
+        <section id="sobre">
+            <h1>Sobre</h1>
+        </section>
 
-    <section id="participantes"></section>
+        <section id="ingredientes">
+            <aside class="all">
+                <h1>Ingredientes</h1>
+                <div class="cards">
+                    <div class="card"></div>
+                    <div class="card"></div>
+                    <div class="card"></div>
+                </div>
+            </aside>
+            
+        </section>
+
+        <section id="participantes">
+            <h1>Participantes</h1>
+        </section>
+    </main>
+
+    <div class="back" onclick="back()">
+        <span class="material-symbols-outlined">
+            straight
+        </span>
+    </div>
 
     <script src="js/menu.js"></script>
     <script src="js/scroll.js"></script>

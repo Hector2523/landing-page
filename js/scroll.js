@@ -1,8 +1,35 @@
-let home = document.getElementById("home");
+function home() {
+    let home = document.getElementById("home");
 
-let sobre = document.getElementById("sobre");
+    if (home) {
+        home.scrollIntoView()
+    }
+}
 
-let ingredientes = document.getElementById("ingredientes");
+function sobre() {
+    let sobre = document.getElementById("sobre");
 
-let participantes = document.getElementById("participantes");
+    if (sobre) {
+        sobre.scrollIntoView()
+    }
+}
 
+function ingredientes() {
+    let ingredientes = document.getElementById("ingredientes");
+
+    if (ingredientes) {
+        ingredientes.scrollIntoView()
+    }
+}
+
+function participantes() {
+    let participantes = document.getElementById("participantes");
+
+    if (participantes) {
+        participantes.scrollIntoView()
+    }
+}
+
+function back() {
+    document.querySelector("body").scrollIntoView();
+}
