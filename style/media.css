@@ -121,6 +121,30 @@
     section#ingredientes aside.all div.cards div.card:hover  {
         scale: 1.035;
     }
+
+    section#sobre section.apresentaçao aside.conteudo {
+        clear: both;
+        max-width: 45%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 35px;
+    }
+
+    section#sobre section.apresentaçao aside.img {
+        clear: both;
+        width: 90%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 35px;
+    }
+
+    section#sobre section.apresentaçao aside.img img {
+        width: 85vw;
+    }
 }
 
 

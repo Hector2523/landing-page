@@ -180,7 +180,6 @@
 
         section#sobre section.apresentaçao {
             background: #FAEADA;
-            height: 95vh;
             width: 100%;
         }
 
@@ -194,11 +193,26 @@
             padding-left: 35px;
         }
 
+        section#sobre section.apresentaçao {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        section#sobre section.apresentaçao aside.img h1 {
+            margin-bottom: calc(100% - 93%);
+        }
+
         section#sobre section.apresentaçao aside.img img {
             border-radius: 20px;
             object-fit: cover;
             object-position: right center;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.292);
+            width: 90vw;
+        }
+
+        section#sobre section.apresentaçao aside.img {
+            margin-bottom: 15px;
         }
 
         section#sobre section.apresentaçao aside.conteudo {
@@ -209,6 +223,17 @@
             flex-direction: column;
             justify-content: center;
             padding-left: 35px;
+        }
+
+        section#sobre section.apresentaçao aside.conteudo p {
+            width: 85vw;
+            font-size: 1.6em;
+            margin-block: 1px;
+        }
+
+        section#sobre section.apresentaçao aside.conteudo h1 {
+            font-size: 2.4em;
+            margin-block: 5px;
         }
 
         @layer animações {
@@ -355,11 +380,70 @@
             object-position: center bottom;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.412);
         }
+
+        @layer animation {
+            @layer h1 {
+                section#ingredientes h1 {
+                    opacity: 0;
+                    transform: translateX(-45%);
+                    transition: .8s ease-in-out;
+                }
+
+                section#ingredientes.visible h1 {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+            }
+
+            @layer cards {
+                section#ingredientes.visible aside.all div.cards div.card {
+                    animation: card 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+                }
+
+                @keyframes card {
+                    0% {
+                        scale: 1;
+                        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.178);
+                    }
+
+                    50% {
+                        scale: 1.07;
+                        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.278);
+                    }
+
+                    100% {
+                        scale: 1;
+                        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.178);
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@layer participantes {
+    @layer p {
+        section#participantes p {
+            font-size: 30px;
+            font-family: var(--fontedois);
+            align-items: center;
+        }
     }
 
-
-    @layer participantes {}
+    @layer h1 {
+        section#participantes h1 {
+            font-size: 50px;
+            font-family: var(--poppins);
+            font-weight: 600;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+        }
+    }
 }
+
 
 @layer return {
     div.back {
@@ -379,12 +463,17 @@
         opacity: 0;
         animation-range: cover 4% 20%;
         cursor: pointer;
+        transition-duration: .4s;
     }
 
     div.back span {
         font-size: 1em;
         scale: 1 1;
         transition-duration: .4s;
+    }
+
+    div.back:hover {
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.447);
     }
 
     div.back:hover span {
@@ -398,28 +487,6 @@
 
         to {
             opacity: 1;
-        }
-    }
-}
-
-@layer participantes {
-    @layer p {
-        section#participantes p {
-            font-size: 30px;
-            font-family: var(--fontedois);
-            align-items: center;
-        }
-    }
-
-    @layer h1 {
-        section#participantes h1 {
-            font-size: 50px;    
-            font-family: var(--poppins);
-            font-weight: 600;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            height: 100%;
         }
     }
 }
