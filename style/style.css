@@ -20,7 +20,7 @@
 
 @layer config {
     body {
-        background-color: #F7EBDB;
+        background-color: #ecd7bc;
     }
 }
 
@@ -48,13 +48,7 @@
         @media only screen and (min-width: 1000px) {
 
             header {
-                background-color: #CCAA81;
-                height: 40px;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.277);
-                padding: 15px 25px;
+                display: none;
             }
 
 
@@ -166,7 +160,8 @@
             font-family: var(--poppins);
             font-weight: 600;
             font-size: 3em;
-            text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.380);
+            text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.180);
+            color: rgb(58, 58, 58);
         }
 
         section#sobre p {
@@ -175,7 +170,8 @@
             word-wrap: break-word;
             overflow-wrap: break-word;
             width: 90%;
-            text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.280);
+            text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.180);
+            color: rgb(61, 60, 60);
         }
 
         section#sobre section.apresentaçao {
@@ -303,7 +299,8 @@
             font-family: var(--poppins);
             font-size: 2em;
             margin-left: 20%;
-            text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.380);
+            text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.180);
+            color: rgb(58, 58, 58);
         }
 
         section#ingredientes aside.all {
@@ -327,11 +324,12 @@
             display: flex;
             justify-content: center;
             transition-duration: 0.6s;
+            background-color: rgba(194, 176, 156, 0.733)
         }
 
         section#ingredientes aside.all div.cards div.card:hover {
             transform: scale(1.035);
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.278);
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.218);
         }
 
         section#ingredientes aside.all div.cards div.card>section {
@@ -457,7 +455,7 @@
         bottom: 2%;
         right: 2.5%;
         border-radius: 50%;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.347);
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.147);
         animation: opacity 1s ease-in-out forwards;
         animation-timeline: scroll();
         opacity: 0;
@@ -473,7 +471,7 @@
     }
 
     div.back:hover {
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.447);
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.247);
     }
 
     div.back:hover span {
