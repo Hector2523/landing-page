@@ -1,5 +1,5 @@
 function home() {
-    let home = document.getElementById("home");
+    let home = document.querySelector("body");
 
     if (home) {
         home.scrollIntoView();
@@ -19,14 +19,6 @@ function ingredientes() {
 
     if (ingredientes) {
         ingredientes.scrollIntoView();
-    }
-}
-
-function participantes() {
-    let participantes = document.getElementById("participantes");
-
-    if (participantes) {
-        participantes.scrollIntoView();
     }
 }
 

@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 600px) {
 
     * {
         cursor: none;
@@ -118,27 +118,38 @@
         cursor: none;
     }
 
-    section#ingredientes aside.all div.cards div.card:hover  {
+    section#ingredientes aside.all div.cards div.card:hover {
         scale: 1.035;
     }
 
     section#sobre section.apresentaçao aside.conteudo {
         clear: both;
-        max-width: 45%;
+        max-width: 100%;
         height: 100%;
+        margin: auto;
+        padding: 0px;
+    }
+
+    section#sobre section.apresentacao {
+        background: #FAEADA;
+        width: 100vw;
+        padding-bottom: 35px;
+        margin: auto;
         display: flex;
-        flex-direction: column;
         justify-content: center;
-        padding-left: 35px;
+        align-items: center;
     }
 
     section#sobre section.apresentaçao aside.img {
         clear: both;
-        width: 90%;
+        width: 100%;
         height: 100%;
+        padding: 0;
+        margin: 0;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
     }
 
     section#sobre section.apresentaçao aside.img img {
@@ -146,6 +157,8 @@
         object-fit: cover;
         object-position: right center;
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.292);
+        display: block;
+        margin: auto;
     }
 
     section#ingredientes aside.all {
@@ -172,7 +185,7 @@
         margin-top: 0;
     }
 
-    section#sobre section.apresentaçao aside.img img, section#sobre section.apresentaçao aside.img {
+    section#sobre section.apresentaçao aside.img img {
         width: 90vw;
     }
 
@@ -181,29 +194,26 @@
     }
 
     section#sobre section.apresentaçao aside.conteudo p {
-        font-size: 1.6em;
+        font-size: 1.7em;
         margin-block: 1px;
         width: 90vw;
         margin-bottom: 0;
     }
 
-    
+
 }
 
 
 
-@media only screen and (min-width: 760px) and (max-width: 800px)  {
+@media only screen and (min-width: 601px) and (max-width: 800px) {
 
-    
+
     * {
         cursor: none;
     }
 
     /* header */
 
-    header nav {
-        display: none;
-    }
 
     header section.responsive {
         width: 40px;
@@ -266,7 +276,7 @@
         transition-duration: .6s;
         z-index: 888;
         background-color: #CCAA81;
-        width: 40vw;
+        width: 25vw;
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.288);
         border-radius: 15px 0px 0px 15px;
     }
@@ -275,7 +285,7 @@
     section.menuactive {
         position: fixed;
         inset: 0;
-        left: calc(100% - 40vw);
+        left: calc(100% - 25vw);
     }
 
     body {
@@ -288,6 +298,8 @@
         flex-direction: column;
         gap: 10px;
         margin-top: calc(20%);
+        position: absolute;
+        top: 5%;
     }
 
     section.menu menu a {
@@ -295,6 +307,7 @@
         font-family: var(--poppins);
         color: rgb(61, 61, 61);
         transition: .8s ease-in-out;
+        font-size: 1.1em;
     }
 
     section.menu menu a:hover {
@@ -311,7 +324,7 @@
         cursor: none;
     }
 
-    section#ingredientes aside.all div.cards div.card:hover  {
+    section#ingredientes aside.all div.cards div.card:hover {
         scale: 1.035;
     }
 
@@ -365,7 +378,8 @@
         margin-top: 0;
     }
 
-    section#sobre section.apresentaçao aside.img img, section#sobre section.apresentaçao aside.img {
+    section#sobre section.apresentaçao aside.img img,
+    section#sobre section.apresentaçao aside.img {
         width: 90vw;
     }
 
