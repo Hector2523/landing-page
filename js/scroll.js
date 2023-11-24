@@ -34,6 +34,10 @@ function back() {
     document.querySelector("body").scrollIntoView();
 }
 
+function cafe() {
+    document.getElementById("cafe").scrollIntoView();
+}
+
 function adicionarClasseQuandoVisivel() {
     const secaoObservada = document.querySelector('#animationOne');
 
@@ -73,5 +77,28 @@ function ingredientesVisivel() {
 
 window.addEventListener('load', ingredientesVisivel);
 window.addEventListener('scroll', ingredientesVisivel);
+
+
+function cafeVisivel() {
+    const secaoObservada = document.querySelector('#cafe');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                
+                secaoObservada.classList.add('visible');
+                document.querySelector(".lido").style.backgroundColor = "#92675C";
+            } else {
+                secaoObservada.classList.remove('visible');
+                document.querySelector(".lido").style.backgroundColor = "#ddaa77";
+            }
+        });
+    });
+
+    observer.observe(secaoObservada);
+}
+
+window.addEventListener('load', cafeVisivel);
+window.addEventListener('scroll', cafeVisivel);
 
 
