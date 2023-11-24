@@ -122,6 +122,13 @@
         scale: 1.035;
     }
 
+    section#ingredientes aside.all {
+        text-align: left;
+        margin: 0;
+        padding: 0;
+        text-indent: 0;
+    }
+
     section#sobre section.apresentaçao aside.conteudo {
         clear: both;
         max-width: 100%;
@@ -139,7 +146,7 @@
         justify-content: center;
         align-items: center;
     }
-
+    
     section#sobre section.apresentaçao aside.img {
         clear: both;
         width: 100%;
@@ -151,7 +158,7 @@
         justify-content: center;
         align-items: center;
     }
-
+    
     section#sobre section.apresentaçao aside.img img {
         border-radius: 20px;
         object-fit: cover;
@@ -159,13 +166,6 @@
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.292);
         display: block;
         margin: auto;
-    }
-
-    section#ingredientes aside.all {
-        text-align: left;
-        margin: 0;
-        padding: 0;
-        text-indent: 0;
     }
 
     section#sobre section.apresentaçao aside.conteudo h1 {
@@ -328,6 +328,85 @@
         scale: 1.035;
     }
 
+    section#ingredientes aside.all {
+        text-align: left;
+        margin: 0;
+        padding: 0;
+        text-indent: 0;
+    }
+
+    section#sobre section.apresentaçao aside.conteudo {
+        clear: both;
+        max-width: 100%;
+        height: 100%;
+        margin: auto;
+        padding: 0px;
+    }
+
+    section#sobre section.apresentacao {
+        background: #FAEADA;
+        width: 100vw;
+        padding-bottom: 35px;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    section#sobre section.apresentaçao aside.img {
+        clear: both;
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    section#sobre section.apresentaçao aside.img img {
+        border-radius: 20px;
+        object-fit: cover;
+        object-position: right center;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.292);
+        display: block;
+        margin: auto;
+    }
+
+    section#sobre section.apresentaçao aside.conteudo h1 {
+        font-size: 2.4em;
+        margin-block: 5px;
+    }
+
+    section#sobre section.apresentaçao {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: normal;
+        gap: 0;
+    }
+
+    section#sobre section.apresentaçao aside.conteudo {
+        margin-top: 0;
+    }
+
+    section#sobre section.apresentaçao aside.img img {
+        width: 90vw;
+    }
+
+    section#sobre section.apresentaçao aside.img h1 {
+        margin-bottom: calc(100% - 93%);
+        text-align: left;
+    }
+
+    section#sobre section.apresentaçao aside.conteudo p {
+        font-size: 1.7em;
+        margin-block: 1px;
+        width: 90vw;
+        margin-bottom: 0;
+    }
+
     section#sobre section.apresentaçao aside.conteudo {
         clear: both;
         max-width: 45%;
@@ -353,48 +432,6 @@
         object-position: right center;
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.292);
     }
-
-    section#ingredientes aside.all {
-        text-align: left;
-        margin: 0;
-        padding: 0;
-        text-indent: 0;
-    }
-
-    section#sobre section.apresentaçao aside.conteudo h1 {
-        font-size: 2.4em;
-        margin-block: 5px;
-    }
-
-    section#sobre section.apresentaçao {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: normal;
-        gap: 0;
-    }
-
-    section#sobre section.apresentaçao aside.conteudo {
-        margin-top: 0;
-    }
-
-    section#sobre section.apresentaçao aside.img img,
-    section#sobre section.apresentaçao aside.img {
-        width: 90vw;
-    }
-
-    section#sobre section.apresentaçao aside.img h1 {
-        margin-bottom: calc(100% - 93%);
-    }
-
-    section#sobre section.apresentaçao aside.conteudo p {
-        font-size: 1.6em;
-        margin-block: 1px;
-        width: 90vw;
-        margin-bottom: 0;
-    }
-
-
 }
 
 @media only screen and (min-width: 800px) and (max-width: 999px) {
@@ -503,4 +540,106 @@
     section.menu menu a:hover {
         color: rgb(32, 32, 32);
     }
+
+    
+    section#sobre section.apresentaçao aside.conteudo {
+        clear: both;
+        max-width: 100%;
+        height: 100%;
+        margin: auto;
+        padding: 0px;
+    }
+
+    section#sobre section.apresentacao {
+        background: #FAEADA;
+        width: 100vw;
+        padding-bottom: 35px;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    section#sobre section.apresentaçao aside.img {
+        clear: both;
+        width: 100vw;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    section#sobre section.apresentaçao aside.img img {
+        border-radius: 20px;
+        object-fit: cover;
+        object-position: right center;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.292);
+        display: block;
+        margin: auto;
+    }
+
+    section#sobre section.apresentaçao aside.conteudo h1 {
+        font-size: 2.4em;
+        margin-block: 5px;
+    }
+
+    section#sobre section.apresentaçao {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: normal;
+        gap: 0;
+    }
+
+    section#sobre section.apresentaçao aside.conteudo {
+        margin-top: 0;
+    }
+
+    section#sobre section.apresentaçao aside.img img {
+        width: 80vw;
+        display: block;
+        margin: auto;
+    }
+
+    section#sobre section.apresentaçao aside.img h1 {
+        margin-bottom: 0;
+        text-align: left;
+    }
+
+    section#sobre section.apresentaçao aside.conteudo p {
+        font-size: 1.7em;
+        margin-block: 1px;
+        width: 90vw;
+        margin-bottom: 0;
+    }
+
+    section#sobre section.apresentaçao aside.conteudo {
+        clear: both;
+        max-width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0px;
+    }
+
+    section#sobre section.apresentaçao aside.img {
+        clear: both;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    section#sobre section.apresentaçao aside.img img {
+        border-radius: 20px;
+        object-fit: cover;
+        object-position: right center;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.292);
+    }
+
 }
