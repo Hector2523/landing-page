@@ -80,30 +80,6 @@ function ingredientesVisivel() {
     });
 
     observer.observe(secaoObservada);
-    document.querySelector(".back").addEventListener("click", () => {
-    setTimeout(scrollBack, 600);
-
-    let scrollSection = document.getElementById("scroll");
-    scrollSection.scrollTop = 0;
-
-    secaoObservada.classList.remove('visible');
-    document.querySelector(".lido").style.backgroundColor = "#ddaa77";
-
-    //removendo classes
-    window.removeEventListener('load', wheyVisivel);
-    window.removeEventListener('scroll', wheyVisivel);
-
-    window.removeEventListener('scroll', leiteVisivel);
-    window.removeEventListener('load', leiteVisivel);
-
-    window.removeEventListener('load', ingredientesVisivel);
-    window.removeEventListener('scroll', ingredientesVisivel);
-
-    function scrollBack() {
-        secaoObservada.classList.remove('visible');
-        document.querySelector("body").scrollIntoView();
-    }
-})
 
 }
 
@@ -182,13 +158,9 @@ document.querySelector(".back").addEventListener("click", () => {
     let scrollSection = document.getElementById("scroll");
     scrollSection.scrollTop = 0;
 
-    secaoObservada.classList.remove('visible');
     document.querySelector(".lido").style.backgroundColor = "#ddaa77";
 
-    //removendo classes
-
     function scrollBack() {
-        secaoObservada.classList.remove('visible');
         document.querySelector("body").scrollIntoView();
     }
 })
