@@ -14,20 +14,6 @@ function sobre() {
     }
 }
 
-function back() {
-    setTimeout(scrollBack, 600);
-
-    let scrollSection = document.getElementById("scroll");
-    scrollSection.scrollTop = 0;
-
-    secaoObservada.classList.remove('visible');
-    document.querySelector(".lido").style.backgroundColor = "#ddaa77";
-
-    function scrollBack() {
-        document.querySelector("body").scrollIntoView();
-    }
-    
-}
 
 function cafe() {
     setTimeout(scrollCafe, 700)
@@ -72,26 +58,76 @@ function adicionarClasseQuandoVisivel() {
     });
 
     observer.observe(secaoObservada);
+    document.querySelector(".back").addEventListener("click", () => {
+    setTimeout(scrollBack, 600);
+
+    let scrollSection = document.getElementById("scroll");
+    scrollSection.scrollTop = 0;
+
+    secaoObservada.classList.remove('visible');
+    document.querySelector(".lido").style.backgroundColor = "#ddaa77";
+
+    //removendo classes
+    window.removeEventListener('load', wheyVisivel);
+    window.removeEventListener('scroll', wheyVisivel);
+
+    window.removeEventListener('scroll', leiteVisivel);
+    window.removeEventListener('load', leiteVisivel);
+
+    window.removeEventListener('load', ingredientesVisivel);
+    window.removeEventListener('scroll', ingredientesVisivel);
+
+    function scrollBack() {
+        secaoObservada.classList.remove('visible');
+        document.querySelector("body").scrollIntoView();
+    }
+})
+
 }
 
 window.addEventListener('load', adicionarClasseQuandoVisivel);
 window.addEventListener('scroll', adicionarClasseQuandoVisivel);
 
 function ingredientesVisivel() {
-    const secaoObservada = document.querySelector('#ingredientes');
+    var secaoObservadaDois = document.querySelector('#ingredientes');
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
                 
-                secaoObservada.classList.add('visible');
+                secaoObservadaDois.classList.add('visible');
             } else {
-                secaoObservada.classList.remove('visible');
+                secaoObservadaDois.classList.remove('visible');
             }
         });
     });
 
     observer.observe(secaoObservada);
+    document.querySelector(".back").addEventListener("click", () => {
+    setTimeout(scrollBack, 600);
+
+    let scrollSection = document.getElementById("scroll");
+    scrollSection.scrollTop = 0;
+
+    secaoObservada.classList.remove('visible');
+    document.querySelector(".lido").style.backgroundColor = "#ddaa77";
+
+    //removendo classes
+    window.removeEventListener('load', wheyVisivel);
+    window.removeEventListener('scroll', wheyVisivel);
+
+    window.removeEventListener('scroll', leiteVisivel);
+    window.removeEventListener('load', leiteVisivel);
+
+    window.removeEventListener('load', ingredientesVisivel);
+    window.removeEventListener('scroll', ingredientesVisivel);
+
+    function scrollBack() {
+        secaoObservada.classList.remove('visible');
+        document.querySelector("body").scrollIntoView();
+    }
+})
+
 }
 
 window.addEventListener('load', ingredientesVisivel);
@@ -99,15 +135,15 @@ window.addEventListener('scroll', ingredientesVisivel);
 
 
 function cafeVisivel() {
-    const secaoObservada = document.querySelector('#cafe');
+    var secaoObservadaTres = document.querySelector('#cafe');
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
-                secaoObservada.classList.add('visible');
+                secaoObservadaTres.classList.add('visible');
                 document.querySelector(".lido").style.backgroundColor = "#92675C";
             } else {
-                secaoObservada.classList.remove('visible');
+                secaoObservadaTres.classList.remove('visible');
                 document.querySelector(".lido").style.backgroundColor = "#ddaa77";
             }
         });
@@ -135,6 +171,31 @@ function leiteVisivel() {
     }, { threshold: 0});
 
     observer.observe(secaoObservada);
+    document.querySelector(".back").addEventListener("click", () => {
+    setTimeout(scrollBack, 600);
+
+    let scrollSection = document.getElementById("scroll");
+    scrollSection.scrollTop = 0;
+
+    secaoObservada.classList.remove('visible');
+    document.querySelector(".lido").style.backgroundColor = "#ddaa77";
+
+    //removendo classes
+    window.removeEventListener('load', wheyVisivel);
+    window.removeEventListener('scroll', wheyVisivel);
+
+    window.removeEventListener('scroll', leiteVisivel);
+    window.removeEventListener('load', leiteVisivel);
+
+    window.removeEventListener('load', ingredientesVisivel);
+    window.removeEventListener('scroll', ingredientesVisivel);
+
+    function scrollBack() {
+        secaoObservada.classList.remove('visible');
+        document.querySelector("body").scrollIntoView();
+    }
+})
+
 }
 
 window.addEventListener('load', leiteVisivel);
@@ -156,6 +217,31 @@ function wheyVisivel() {
     }, { threshold: 0.6 });
 
     observer.observe(secaoObservada);
+    document.querySelector(".back").addEventListener("click", () => {
+    setTimeout(scrollBack, 600);
+
+    let scrollSection = document.getElementById("scroll");
+    scrollSection.scrollTop = 0;
+
+    secaoObservada.classList.remove('visible');
+    document.querySelector(".lido").style.backgroundColor = "#ddaa77";
+
+    //removendo classes
+    window.removeEventListener('load', wheyVisivel);
+    window.removeEventListener('scroll', wheyVisivel);
+
+    window.removeEventListener('scroll', leiteVisivel);
+    window.removeEventListener('load', leiteVisivel);
+
+    window.removeEventListener('load', ingredientesVisivel);
+    window.removeEventListener('scroll', ingredientesVisivel);
+
+    function scrollBack() {
+        secaoObservada.classList.remove('visible');
+        document.querySelector("body").scrollIntoView();
+    }
+})
+
 }
 
 window.addEventListener('load', wheyVisivel);
