@@ -21,7 +21,7 @@ function cafe() {
     function scrollCafe() {
         document.getElementById("cafe").scrollIntoView();
     }
-    
+
 }
 
 function leite() {
@@ -30,7 +30,7 @@ function leite() {
     function scrollLeite() {
         document.getElementById("leite").scrollIntoView();
     }
-    
+
 }
 
 function whey() {
@@ -40,7 +40,7 @@ function whey() {
     function scrollWhey() {
         document.getElementById("whey").scrollIntoView();
     }
-    
+
 }
 
 function adicionarClasseQuandoVisivel() {
@@ -49,7 +49,7 @@ function adicionarClasseQuandoVisivel() {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
-                
+
                 secaoObservada.classList.add('visible');
             } else {
                 secaoObservada.classList.remove('visible');
@@ -71,7 +71,7 @@ function ingredientesVisivel() {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
-                
+
                 secaoObservadaDois.classList.add('visible');
             } else {
                 secaoObservadaDois.classList.remove('visible');
@@ -121,7 +121,7 @@ function leiteVisivel() {
                 document.querySelector(".lido").style.backgroundColor = "#ddaa77";
             }
         });
-    }, { threshold: 0});
+    }, { threshold: 0 });
 
     observer.observe(secaoObservada);
 
@@ -152,15 +152,33 @@ function wheyVisivel() {
 window.addEventListener('load', wheyVisivel);
 window.addEventListener('scroll', wheyVisivel);
 
+var isClickEnabled = true;
+
 document.querySelector(".back").addEventListener("click", () => {
-    setTimeout(scrollBack, 600);
 
-    let scrollSection = document.getElementById("scroll");
-    scrollSection.scrollTop = 0;
+    if (isClickEnabled == true) {
 
-    document.querySelector(".lido").style.backgroundColor = "#ddaa77";
+        setTimeout(scrollBack, 600);
 
-    function scrollBack() {
-        document.querySelector("body").scrollIntoView();
+        let scrollSection = document.getElementById("scroll");
+        scrollSection.scrollTop = 0;
+
+        document.querySelector(".lido").style.backgroundColor = "#ddaa77";
+
+        function scrollBack() {
+            document.querySelector("body").scrollIntoView();
+        }
+
+        isClickEnabled = false;
+
+        setTimeout(click, 6000)
+
+    } else {
+        console.log("Você não possui clicks");
     }
-})
+});
+
+function click() {
+    isClickEnabled = true;
+}
+
