@@ -42,3 +42,12 @@ window.addEventListener("scroll", function() {
         active = false;
     }
 });
+
+
+function display() {
+    document.querySelector("ul.drop").style.display = "block";
+}
+
+function second() {
+    document.querySelector("ul.drop").style.display = "none";
+}
