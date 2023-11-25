@@ -102,6 +102,7 @@
         font-family: var(--poppins);
         color: rgb(61, 61, 61);
         transition: .8s ease-in-out;
+        font-weight: 600;
     }
 
     section.menu menu a:hover {
@@ -190,7 +191,8 @@
     }
 
     section#sobre section.apresentaçao aside.img h1 {
-        margin-bottom: calc(100% - 93%);
+        margin-block: 15px;
+        text-align: left;
     }
 
     section#sobre section.apresentaçao aside.conteudo p {
@@ -198,6 +200,11 @@
         margin-block: 1px;
         width: 90vw;
         margin-bottom: 0;
+    }
+
+    section#ingredientes {
+        height: min-content !important;
+        padding-block-end: 30px;
     }
 
 
@@ -307,6 +314,7 @@
         font-family: var(--poppins);
         color: rgb(61, 61, 61);
         transition: .8s ease-in-out;
+        font-weight: 600;
         font-size: 1.1em;
     }
 
@@ -362,7 +370,6 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
     }
     
     section#sobre section.apresentaçao aside.img img {
@@ -372,6 +379,7 @@
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.292);
         display: block;
         margin: auto;
+        width: 90vw;
     }
 
     section#sobre section.apresentaçao aside.conteudo h1 {
@@ -391,25 +399,22 @@
         margin-top: 0;
     }
 
-    section#sobre section.apresentaçao aside.img img {
-        width: 90vw;
-    }
-
     section#sobre section.apresentaçao aside.img h1 {
-        margin-bottom: calc(100% - 93%);
+        margin-left: 5%;
+        margin-block: 15px;
         text-align: left;
     }
 
     section#sobre section.apresentaçao aside.conteudo p {
         font-size: 1.7em;
         margin-block: 1px;
-        width: 90vw;
+        width: 90%;
         margin-bottom: 0;
     }
 
     section#sobre section.apresentaçao aside.conteudo {
         clear: both;
-        max-width: 45%;
+        max-width: 100%;
         height: 100%;
         display: flex;
         flex-direction: column;
@@ -417,20 +422,12 @@
         padding-left: 35px;
     }
 
-    section#sobre section.apresentaçao aside.img {
-        clear: both;
-        width: 90%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+    section#ingredientes {
+        height: max-content !important;
     }
 
-    section#sobre section.apresentaçao aside.img img {
-        border-radius: 20px;
-        object-fit: cover;
-        object-position: right center;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.292);
+    section#cafe div.coffee div.img {
+        height: 100%;
     }
 }
 
@@ -534,6 +531,7 @@
         text-decoration: none;
         font-family: var(--poppins);
         color: rgb(61, 61, 61);
+        font-weight: 600;
         transition: .8s ease-in-out;
     }
 

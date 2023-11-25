@@ -14,13 +14,7 @@ function sobre() {
     }
 }
 
-function ingredientes() {
-    let ingredientes = document.getElementById("ingredientes");
 
-    if (ingredientes) {
-        ingredientes.scrollIntoView();
-    }
-}
 
 function back() {
     document.querySelector("body").scrollIntoView();

@@ -42,6 +42,67 @@
         }
     }
 
+    @layer menu {
+
+        section.menu menu a.ingredientes {
+            display: flex;
+            align-items: center;
+            margin-left: -25px;
+            gap: 0px;
+        }
+
+        section.menu menu a.ingredientes span {
+            font-size: 1em;
+            transform: rotate(0deg);
+            transition: .8s ease-in-out;
+        }
+
+        section.menu menu a.ingredientes:hover span {
+            transform: rotate(180deg);
+        }
+
+        section.menu menu ul {
+            display: none;
+            margin: 0;
+            list-style-type: none;
+            font-family: var(--poppins);
+            font-weight: 500;
+        }
+
+        section.menu menu ul {
+            display: none;
+        }
+
+        section.menu menu ul li {
+            color: rgb(61, 61, 61);
+            opacity: 0;
+            translate: -35px -15px;
+            transition: .6s ease-in-out;
+        }
+
+        section.menu menu ul li {
+            opacity: 1;
+            translate: 0 0;
+            animation: .8s ease-in-out forwards;
+        }
+
+        section.menu menu ul li:hover {
+            color: rgb(32, 32, 32);
+        }
+
+        @keyframes translate {
+            from {
+                opacity: 0;
+                translate: -35px -15px;
+            }
+
+            to {
+                opacity: 1;
+                translate: 0 0;
+            }
+        }
+    }
+
     @layer responsive {
 
 
@@ -150,7 +211,7 @@
             padding-bottom: 35px;
         }
 
-        
+
 
         section#sobre section.apresentaçao {
             display: flex;
@@ -169,6 +230,7 @@
             object-position: right center;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.292);
         }
+
 
         section#sobre section.apresentaçao aside.img {
             margin-bottom: 15px;
@@ -399,7 +461,7 @@
         section#cafe section.container::-webkit-scrollbar {
             display: none;
         }
-        
+
 
         section#cafe div.coffee {
             height: 100vh;
@@ -409,7 +471,7 @@
             z-index: 2;
         }
 
-        
+
 
         section#cafe div.coffee div.img {
             width: 100%;
@@ -432,10 +494,39 @@
             }
         }
 
-        section#cafe + div.lido {
+        section#cafe+div.lido {
             background-color: transparent;
         }
 
+    }
+}
+
+@layer leite {
+    section#leite {
+        min-height: 100vh;
+        background-color: #d8c8c2;
+        z-index: 1;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.35), 0px -5px 25px rgba(0, 0, 0, 0.35);
+    }
+
+    section#leite section.leite {
+        float: left;
+    }
+
+    section#leite section.leite aside.imgcontainer {
+        width: 40%;
+        filter: grayscale(45%);
+    }
+
+    section#leite section.leite aside.imgcontainer img {
+        width: 100%;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.253);
+        border-radius: 20px;
+        transition: .8s cubic-bezier(0.455, 0.03, 0.515, 0.955);
     }
 }
 
