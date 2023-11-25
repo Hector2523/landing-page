@@ -3,7 +3,7 @@
 @media only screen and (max-width: 600px) {
 
     * {
-        cursor: none;
+        cursor: initial;
     }
 
     /* header */
@@ -116,7 +116,7 @@
         border-radius: 20px;
         scale: 1;
         transition-duration: .6s;
-        cursor: none;
+        cursor: initial;
     }
 
     section#ingredientes aside.all div.cards div.card:hover {
@@ -191,8 +191,13 @@
     }
 
     section#sobre section.apresentaçao aside.img h1 {
-        margin-block: 15px;
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        align-items: flex-start;
         text-align: left;
+        width: 90%;
+        margin-block: 10px;
     }
 
     section#sobre section.apresentaçao aside.conteudo p {
@@ -207,6 +212,106 @@
         padding-block-end: 30px;
     }
 
+    /* leite */
+
+    section#leite {
+        padding-top: 15px;
+    }
+
+    section#leite section.leite {
+        clear: both;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        height: min-content;
+        width: 100%;
+    }
+
+    section#leite section.leite aside.imgcontainer {
+        filter: grayscale(45%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    section#leite section.leite aside.imgcontainer div.img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: min-content;
+        width: 300px;
+        height: 300px;
+        border-radius: 20px;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.253);
+        overflow: hidden;
+        transition: .8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    section#leite section.leite aside.imgcontainer div.img img {
+        display: block;
+        margin: auto;
+    }
+
+    section#leite.visible section.leite aside.imgcontainer div.img {
+        animation: pop 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    }
+
+    @keyframes pop {
+        0% {
+            scale: 1;
+        }
+
+        50% {
+            scale: 1.1;
+        }
+
+        100% {
+            scale: 1;
+        }
+    }
+
+    section#whey {
+        height: 100vh;
+        width: 100%;
+        background-color: #c9af7e4d;
+        z-index: 1;
+        overflow: hidden;
+        box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.15);
+        display: flex;
+        flex-direction: column;
+    }
+
+    section#whey section.whey {
+        clear: both;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50vh;
+        width: 100vw;
+    }
+
+    section#whey section.whey aside.imgcontainer div.img {
+        background-image: url(../pictures/whey.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position-x: center;
+        width: 100%;
+        height: 100%;
+        background-attachment: fixed;
+        scale: 0.8;
+        margin: auto;
+    }
+
+    section#whey section.whey aside.imgcontainer {
+        filter: grayscale(45%);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+
 
 }
 
@@ -216,7 +321,7 @@
 
 
     * {
-        cursor: none;
+        cursor: initial;
     }
 
     /* header */
@@ -329,7 +434,7 @@
         border-radius: 20px;
         scale: 1;
         transition-duration: .6s;
-        cursor: none;
+        cursor: initial;
     }
 
     section#ingredientes aside.all div.cards div.card:hover {
@@ -429,11 +534,111 @@
     section#cafe div.coffee div.img {
         height: 100%;
     }
+
+     /* leite */
+
+     section#leite section.leite {
+        clear: both;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        height: min-content;
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    section#leite section.leite aside.imgcontainer {
+        filter: grayscale(45%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    section#leite section.leite aside.imgcontainer div.img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: min-content;
+        width: 300px;
+        height: 300px;
+        border-radius: 20px;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.253);
+        overflow: hidden;
+        transition: .8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    section#leite section.leite aside.imgcontainer div.img img {
+        display: block;
+        margin: auto;
+    }
+
+    section#leite.visible section.leite aside.imgcontainer div.img {
+        animation: pop 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    }
+
+    @keyframes pop {
+        0% {
+            scale: 1;
+        }
+
+        50% {
+            scale: 1.1;
+        }
+
+        100% {
+            scale: 1;
+        }
+    }
+
+    /* whey */
+
+    
+    section#whey {
+        height: 100vh;
+        width: 100%;
+        background-color: #c9af7e4d;
+        z-index: 1;
+        overflow: hidden;
+        box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.15);
+        display: flex;
+        flex-direction: column;
+    }
+
+    section#whey section.whey {
+        clear: both;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50vh;
+        width: 100vw;
+    }
+
+    section#whey section.whey aside.imgcontainer div.img {
+        background-image: url(../pictures/whey.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position-x: center;
+        width: 100%;
+        height: 100%;
+        background-attachment: fixed;
+        scale: 0.8;
+        margin: auto;
+    }
+
+    section#whey section.whey aside.imgcontainer {
+        filter: grayscale(45%);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
 }
 
 @media only screen and (min-width: 800px) and (max-width: 999px) {
     * {
-        cursor: none;
+        cursor: initial;
     }
 
     /* header */
@@ -558,18 +763,6 @@
         align-items: center;
     }
     
-    section#sobre section.apresentaçao aside.img {
-        clear: both;
-        width: 100vw;
-        height: 100%;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    
     section#sobre section.apresentaçao aside.img img {
         border-radius: 20px;
         object-fit: cover;
@@ -603,8 +796,13 @@
     }
 
     section#sobre section.apresentaçao aside.img h1 {
-        margin-bottom: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        align-items: flex-start;
         text-align: left;
+        width: 81.5%;
+        margin-block: 10px;
     }
 
     section#sobre section.apresentaçao aside.conteudo p {
@@ -631,6 +829,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
     }
 
     section#sobre section.apresentaçao aside.img img {
