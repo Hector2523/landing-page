@@ -186,14 +186,6 @@ document.querySelector(".back").addEventListener("click", () => {
     document.querySelector(".lido").style.backgroundColor = "#ddaa77";
 
     //removendo classes
-    window.removeEventListener('load', wheyVisivel);
-    window.removeEventListener('scroll', wheyVisivel);
-
-    window.removeEventListener('scroll', leiteVisivel);
-    window.removeEventListener('load', leiteVisivel);
-
-    window.removeEventListener('load', ingredientesVisivel);
-    window.removeEventListener('scroll', ingredientesVisivel);
 
     function scrollBack() {
         secaoObservada.classList.remove('visible');
