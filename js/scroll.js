@@ -65,22 +65,24 @@ function adicionarClasseQuandoVisivel() {
 window.addEventListener('load', adicionarClasseQuandoVisivel);
 window.addEventListener('scroll', adicionarClasseQuandoVisivel);
 
+
+
 function ingredientesVisivel() {
-    var secaoObservadaDois = document.querySelector('#ingredientes');
+    var secaoObservada = document.querySelector('#ingredientes');
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
-
-                secaoObservadaDois.classList.add('visible');
+                secaoObservada.classList.add('visible');
+                document.querySelector(".lido").style.backgroundColor = "#92675C";
             } else {
-                secaoObservadaDois.classList.remove('visible');
+                secaoObservada.classList.remove('visible');
+                document.querySelector(".lido").style.backgroundColor = "#ddaa77";
             }
         });
     });
 
     observer.observe(secaoObservada);
-
 }
 
 window.addEventListener('load', ingredientesVisivel);
@@ -88,15 +90,15 @@ window.addEventListener('scroll', ingredientesVisivel);
 
 
 function cafeVisivel() {
-    var secaoObservadaTres = document.querySelector('#cafe');
+    var secaoObservada = document.querySelector('#cafe');
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
-                secaoObservadaTres.classList.add('visible');
+                secaoObservada.classList.add('visible');
                 document.querySelector(".lido").style.backgroundColor = "#92675C";
             } else {
-                secaoObservadaTres.classList.remove('visible');
+                secaoObservada.classList.remove('visible');
                 document.querySelector(".lido").style.backgroundColor = "#ddaa77";
             }
         });
@@ -171,12 +173,20 @@ document.querySelector(".back").addEventListener("click", () => {
 
         isClickEnabled = false;
 
-        setTimeout(click, 6000)
+        verificar();
+
+        setTimeout(click, 2000)
 
     } else {
         console.log("Você não possui clicks");
     }
 });
+
+function verificar() {
+    if(document.querySelector("body").scrollTop = 0) {
+        isClickEnabled = true;
+    }
+}
 
 function click() {
     isClickEnabled = true;
