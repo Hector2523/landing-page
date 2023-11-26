@@ -88,18 +88,35 @@ function ingredientesVisivel() {
 window.addEventListener('load', ingredientesVisivel);
 window.addEventListener('scroll', ingredientesVisivel);
 
+var animationIsTrue = true;
 
 function cafeVisivel() {
     var secaoObservada = document.querySelector('#cafe');
+    
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
                 secaoObservada.classList.add('visible');
                 document.querySelector(".lido").style.backgroundColor = "#92675C";
+                if (animationIsTrue == true) {
+                    animationIsTrue = false;
+
+                    setInterval(img, 1000);
+
+                    function img() {
+                        document.getElementById("cafeimg").style.translate = "0% -50%";
+                    }
+                }
+
+
             } else {
                 secaoObservada.classList.remove('visible');
                 document.querySelector(".lido").style.backgroundColor = "#ddaa77";
+                if (animationIsTrue == false) {
+                    document.getElementById("cafeimg").style.translate = "0% 4%";
+                }
+
             }
         });
     });
@@ -167,6 +184,8 @@ document.querySelector(".back").addEventListener("click", () => {
 
         document.querySelector(".lido").style.backgroundColor = "#ddaa77";
 
+        document.getElementById("cafeimg").style.translate = "0% 4%";
+
         function scrollBack() {
             document.querySelector("body").scrollIntoView();
         }
@@ -183,7 +202,7 @@ document.querySelector(".back").addEventListener("click", () => {
 });
 
 function verificar() {
-    if(document.querySelector("body").scrollTop = 0) {
+    if (document.querySelector("body").scrollTop = 0) {
         isClickEnabled = true;
     }
 }
@@ -191,4 +210,3 @@ function verificar() {
 function click() {
     isClickEnabled = true;
 }
-
