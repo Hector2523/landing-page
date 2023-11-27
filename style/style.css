@@ -251,7 +251,7 @@
                 display: flex;
                 overflow-x: hidden;
                 flex-direction: column;
-                min-height: 100vh;
+                max-height: max-content;
                 background: transparent;
                 box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.03);
                 position: relative;
@@ -278,6 +278,7 @@
             section#sobre section.apresentaçao {
                 background: #FAEADA;
                 width: 100%;
+                max-height: 100%;
                 padding-bottom: 35px;
             }
 
@@ -381,118 +382,6 @@
             }
         }
 
-        
-    @layer open {
-        section#sobre div.open {
-            position: absolute;
-            bottom: 1.5%;
-            left: 2.5%;
-            width: max-content;
-            display: flex;
-            align-items: center;
-            transition: 1s ease-in-out;
-        }
-
-        section#sobre div.open .gg-chevron-double-down {
-            color: rgb(61, 61, 61);
-            margin-top: -5px;
-            translate: 0 -2px;
-            animation: seta 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
-        }
-        
-
-        @keyframes seta {
-            0% {
-                translate: 0 -2px;
-            }
-
-            50% {
-                translate: 0 2px;
-            }
-
-            100% {
-                translate: 0 -2px;
-            }
-        }
-
-        section#sobre div.open p {
-            position: relative;
-            display: flex;
-            align-items: center;
-            font-size: .8em;
-            margin: 0;
-            gap: 20px;
-            text-wrap: nowrap;
-            font-family: var(--poppins);
-            cursor: pointer;
-        }
-
-        section#chumbado {
-            display: none;
-            opacity: 0;
-            transition: 1.5s cubic-bezier(0.175, 0.885, 0.32, 1);
-        }
-        
-    }
-
-    @layer close {
-        section#whey {
-            position: relative;
-        }
-        section#chumbadao div.close {
-            position: absolute;
-            bottom: 1.5%;
-            left: 2.5%;
-            width: max-content;
-            display: flex;
-            align-items: center;
-            transition: 1s ease-in-out;
-        }
-
-        section#chumbadao div.close .gg-chevron-double-down {
-            color: rgb(61, 61, 61);
-            margin-top: -5px;
-            translate: 0 -2px;
-            rotate: 180deg;
-            animation: seta 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
-        }
-        
-
-        @keyframes seta {
-            0% {
-                translate: 0 -2px;
-            }
-
-            50% {
-                translate: 0 2px;
-            }
-
-            100% {
-                translate: 0 -2px;
-            }
-        }
-
-        section#chumbadao div.close p {
-            position: relative;
-            display: flex;
-            align-items: center;
-            font-size: .8em;
-            margin: 0;
-            gap: 20px;
-            font-weight: bolder;
-            text-wrap: nowrap;
-            font-family: var(--poppins);
-            cursor: pointer;
-            color: rgb(61, 60, 60);
-        }
-
-        section#chumbado {
-            display: none;
-            opacity: 0;
-            transition: 1.5s cubic-bezier(0.175, 0.885, 0.32, 1);
-        }
-        
-    }
 
         @layer cafe {
             section#cafe {
@@ -646,6 +535,117 @@
 
 }
 
+@layer open {
+    div.open {
+        position: absolute;
+        bottom: 1.5%;
+        left: 2.5%;
+        width: max-content;
+        display: flex;
+        align-items: center;
+        transition: 1s ease-in-out;
+    }
+
+    div.open .gg-chevron-double-down {
+        color: rgb(61, 61, 61);
+        margin-top: -5px;
+        translate: 0 -2px;
+        animation: seta 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
+    }
+    
+
+    @keyframes seta {
+        0% {
+            translate: 0 -2px;
+        }
+
+        50% {
+            translate: 0 2px;
+        }
+
+        100% {
+            translate: 0 -2px;
+        }
+    }
+
+    div.open p {
+        position: relative;
+        display: flex;
+        align-items: center;
+        font-size: .8em;
+        margin: 0;
+        gap: 20px;
+        text-wrap: nowrap;
+        font-family: var(--poppins);
+        cursor: pointer;
+    }
+
+    section#chumbado {
+        display: none;
+        opacity: 0;
+        transition: 1.5s cubic-bezier(0.175, 0.885, 0.32, 1);
+    }
+    
+}
+
+@layer close {
+    section#whey {
+        position: relative;
+    }
+    div.close {
+        position: absolute;
+        bottom: 1.5%;
+        left: 2.5%;
+        width: max-content;
+        display: flex;
+        align-items: center;
+        transition: 1s ease-in-out;
+    }
+
+    div.close .gg-chevron-double-down {
+        color: rgb(61, 61, 61);
+        margin-top: -5px;
+        translate: 0 -2px;
+        rotate: 180deg;
+        animation: seta 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
+    }
+    
+
+    @keyframes seta {
+        0% {
+            translate: 0 -2px;
+        }
+
+        50% {
+            translate: 0 2px;
+        }
+
+        100% {
+            translate: 0 -2px;
+        }
+    }
+
+    div.close p {
+        position: relative;
+        display: flex;
+        align-items: center;
+        font-size: .8em;
+        margin: 0;
+        gap: 20px;
+        font-weight: bolder;
+        text-wrap: nowrap;
+        font-family: var(--poppins);
+        cursor: pointer;
+        color: rgb(61, 60, 60);
+    }
+
+    section#chumbado {
+        display: none;
+        opacity: 0;
+        transition: 1.5s cubic-bezier(0.175, 0.885, 0.32, 1);
+    }
+    
+}
 
 @layer return {
     div.back {
