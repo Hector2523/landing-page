@@ -49,8 +49,8 @@ function adicionarClasseQuandoVisivel() {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
-
                 secaoObservada.classList.add('visible');
+                isClickEnabled = true;
             } else {
                 secaoObservada.classList.remove('visible');
             }
@@ -175,7 +175,11 @@ var isClickEnabled = true;
 
 document.querySelector(".back").addEventListener("click", () => {
 
+    setTimeout(enableClick, 2000)
+
     if (isClickEnabled == true) {
+
+        isClickEnabled = false;
 
         setTimeout(scrollBack, 600);
 
@@ -187,26 +191,18 @@ document.querySelector(".back").addEventListener("click", () => {
         document.getElementById("cafeimg").style.translate = "0% 4%";
 
         function scrollBack() {
-            document.querySelector("body").scrollIntoView();
+            document.querySelector("body").scrollIntoView(2000);
         }
 
-        isClickEnabled = false;
-
-        verificar();
-
-        setTimeout(click, 2000)
+        
+        
 
     } else {
         console.log("Você não possui clicks");
     }
 });
 
-function verificar() {
-    if (document.querySelector("body").scrollTop = 0) {
-        isClickEnabled = true;
-    }
-}
-
-function click() {
+function enableClick() {
+    console.log("Clique habilitado");
     isClickEnabled = true;
 }
