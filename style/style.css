@@ -185,355 +185,355 @@
     }
 }
 
-@layer chumbadão {
-    @layer header {
+@layer vitaminas {
+    @layer chumbadão {
+        @layer header {
 
-        @layer headerConfig {
-            header {
-                display: flex;
-                justify-content: flex-end;
-                padding: 5px 15px;
-                background-color: #ecd7bc;
-                box-shadow: 0px 0px 10px black;
+            @layer headerConfig {
+                header {
+                    display: flex;
+                    justify-content: flex-end;
+                    padding: 5px 10px;
+                    background-color: #ecd7bc;
+                }
             }
+
+            @layer responsive {
+
+
+                @media only screen and (min-width: 1000px) {
+
+                    header {
+                        display: none;
+                    }
+
+
+                    header section.responsive {
+                        display: none;
+                    }
+
+                    header menu {
+                        display: none;
+                    }
+
+                    section.menu {
+                        display: none;
+                    }
+
+                    section#sobre section.apresentaçao aside.img {
+                        float: left;
+                        max-width: 45%;
+                        height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        padding-left: 35px;
+                    }
+                }
+
+            }
+
         }
 
-        @layer responsive {
+        @layer main {
 
-
-            @media only screen and (min-width: 1000px) {
-
-                header {
-                    display: none;
+            @layer config {
+                main {
+                    overflow-x: hidden;
+                    height: max-content;
+                    z-index: 5;
                 }
 
+            }
 
-                header section.responsive {
-                    display: none;
+            @layer sobre {
+                
+                section#sobre {
+                    display: flex;
+                    overflow-x: hidden;
+                    flex-direction: column;
+                    min-height: 100vh;
+                    max-height: min-content;
+                    background: transparent;
+                    justify-content: flex-start;
+                    position: relative;
+                    margin-top: -50px;
                 }
 
-                header menu {
-                    display: none;
+                section#animationOne h1 {
+                    font-family: var(--poppins);
+                    font-weight: 600;
+                    font-size: 2rem;
+                    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.180);
+                    color: rgb(58, 58, 58);
                 }
 
-                section.menu {
-                    display: none;
+                section#sobre p {
+                    font-weight: bolder;
+                    font-size: 30px;
+                    word-wrap: break-word;
+                    overflow-wrap: break-word;
+                    width: 90%;
+                    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.180);
+                    color: rgb(61, 60, 60);
                 }
+
+                section#sobre section.apresentaçao {
+                    width: 100%;
+                    padding-bottom: 35px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-top: 25px;
+                }
+
+                section#sobre section.apresentaçao aside.img h1 {
+                    margin-bottom: calc(100% - 93%);
+                }
+
+                section#sobre section.apresentaçao aside.img img {
+                    border-radius: 20px;
+                    object-fit: cover;
+                    object-position: right center;
+                    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.292);
+                }
+
 
                 section#sobre section.apresentaçao aside.img {
+                    margin-bottom: 15px;
                     float: left;
+                }
+
+                section#sobre section.apresentaçao aside.conteudo {
+                    float: right;
                     max-width: 45%;
                     height: 100%;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
-                    padding-left: 35px;
+                    align-items: center;
                 }
-            }
 
-        }
+                section#sobre section.apresentaçao aside.conteudo p {
+                    width: 80%;
+                    font-size: 1.6em;
+                    margin-block: 1px;
+                }
 
-    }
+                section#sobre section.apresentaçao aside.conteudo h1 {
+                    font-size: 2.4em;
+                    margin-block: 5px;
+                }
 
-    @layer main {
+                @layer animações {
+                    @layer h1 {
 
-        @layer config {
-            main {
-                overflow-x: hidden;
-                height: max-content;
-                z-index: 5;
-            }
+                        @layer primeiro {
+                            section#sobre section.apresentaçao aside.img h1 {
+                                transform: translateX(-100vw);
+                                transition: .6s ease-in-out;
+                            }
 
-        }
+                            section#sobre section.visible aside.img h1 {
+                                transform: translateX(0vw);
+                            }
+                        }
 
-        @layer sobre {
-            section#sobre {
-                display: flex;
-                overflow-x: hidden;
-                flex-direction: column;
-                max-height: max-content;
-                background: transparent;
-                box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.03);
-                position: relative;
-            }
+                        @layer segundo {
+                            section#sobre section.apresentaçao aside.conteudo h1 {
+                                opacity: 0;
+                                transform: translateY(45%);
+                                transition: 4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                            }
 
-            section#sobre h1 {
-                font-family: var(--poppins);
-                font-weight: 600;
-                font-size: 3em;
-                text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.180);
-                color: rgb(58, 58, 58);
-            }
+                            section#sobre section.visible aside.conteudo h1 {
+                                opacity: 1;
+                                transform: translateY(0);
+                            }
+                        }
 
-            section#sobre p {
-                font-weight: bolder;
-                font-size: 30px;
-                word-wrap: break-word;
-                overflow-wrap: break-word;
-                width: 90%;
-                text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.180);
-                color: rgb(61, 60, 60);
-            }
+                        @layer img {
+                            section#sobre section.apresentaçao aside.img img {
+                                opacity: 0;
+                                transition: 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                            }
 
-            section#sobre section.apresentaçao {
-                background: #FAEADA;
-                width: 100%;
-                max-height: 100%;
-                padding-bottom: 35px;
-            }
+                            section#sobre section.visible aside.img img {
+                                opacity: 1;
+                            }
+                        }
 
+                    }
 
-
-            section#sobre section.apresentaçao {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-
-            }
-
-            section#sobre section.apresentaçao aside.img h1 {
-                margin-bottom: calc(100% - 93%);
-            }
-
-            section#sobre section.apresentaçao aside.img img {
-                border-radius: 20px;
-                object-fit: cover;
-                object-position: right center;
-                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.292);
-            }
-
-
-            section#sobre section.apresentaçao aside.img {
-                margin-bottom: 15px;
-                float: left;
-            }
-
-            section#sobre section.apresentaçao aside.conteudo {
-                float: right;
-                max-width: 45%;
-                height: 100%;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-            }
-
-            section#sobre section.apresentaçao aside.conteudo p {
-                width: 80%;
-                font-size: 1.6em;
-                margin-block: 1px;
-            }
-
-            section#sobre section.apresentaçao aside.conteudo h1 {
-                font-size: 2.4em;
-                margin-block: 5px;
-            }
-
-            @layer animações {
-                @layer h1 {
-
-                    @layer primeiro {
-                        section#sobre section.apresentaçao aside.img h1 {
-                            transform: translateX(-100vw);
+                    @layer p {
+                        section#sobre section.apresentaçao aside.conteudo p {
+                            font-family: var(--fontedois);
+                            transform: translateX(100vw);
                             transition: .6s ease-in-out;
                         }
 
-                        section#sobre section.visible aside.img h1 {
+                        section#sobre section.visible aside.conteudo p {
                             transform: translateX(0vw);
                         }
                     }
-
-                    @layer segundo {
-                        section#sobre section.apresentaçao aside.conteudo h1 {
-                            opacity: 0;
-                            transform: translateY(45%);
-                            transition: 4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-                        }
-
-                        section#sobre section.visible aside.conteudo h1 {
-                            opacity: 1;
-                            transform: translateY(0);
-                        }
-                    }
-
-                    @layer img {
-                        section#sobre section.apresentaçao aside.img img {
-                            opacity: 0;
-                            transition: 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-                        }
-
-                        section#sobre section.visible aside.img img {
-                            opacity: 1;
-                        }
-                    }
-
-                }
-
-                @layer p {
-                    section#sobre section.apresentaçao aside.conteudo p {
-                        font-family: var(--fontedois);
-                        transform: translateX(100vw);
-                        transition: .6s ease-in-out;
-                    }
-
-                    section#sobre section.visible aside.conteudo p {
-                        transform: translateX(0vw);
-                    }
                 }
             }
-        }
 
 
-        @layer cafe {
-            section#cafe {
-                min-height: 100vh;
-                background-color: rgb(36, 36, 36);
-                z-index: 1;
-                overflow: hidden;
-                box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.35), 0px -5px 25px rgba(0, 0, 0, 0.35);
+            @layer cafe {
+                section#cafe {
+                    min-height: 100vh;
+                    background-color: rgb(36, 36, 36);
+                    z-index: 1;
+                    overflow: hidden;
+                    box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.35), 0px -5px 25px rgba(0, 0, 0, 0.35);
+                }
+
+
+
+                section#cafe div.coffee {
+                    height: 120vh;
+                    width: 25%;
+                    float: left;
+                    margin-left: 35px;
+                    z-index: 2;
+                }
+
+
+
+                section#cafe div.coffee div.img {
+                    width: 100%;
+                    height: 300%;
+                    background-image: url(../pictures/cafe.png);
+                    background-size: contain;
+                    background-repeat: repeat-y;
+                    z-index: 4;
+                    translate: 0;
+                    translate: 0 4%;
+                    transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                }
+
+                section#cafe+div.lido {
+                    background-color: transparent;
+                }
+
             }
 
 
+            @layer leite {
+                section#leite {
+                    height: 110vh;
+                    background-color: #d8c8c2;
+                    z-index: 1;
+                    overflow: hidden;
+                    display: flex;
+                    justify-content: space-around;
+                    box-shadow: 0px -5px 20px rgba(0, 0, 0, 0.321);
+                }
 
-            section#cafe div.coffee {
-                height: 120vh;
-                width: 25%;
-                float: left;
-                margin-left: 35px;
-                z-index: 2;
-            }
+                section#leite section.leite {
+                    float: left;
+                    display: flex;
+                    align-items: center;
+                    height: 100%;
+                    width: 40%;
+                }
 
+                section#leite section.leite aside.imgcontainer {
+                    filter: grayscale(45%);
+                }
 
+                section#leite section.leite aside.imgcontainer div.img {
+                    width: 300px;
+                    height: 300px;
+                    border-radius: 20px;
+                    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.253);
+                    overflow: hidden;
+                    transition: .8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                }
 
-            section#cafe div.coffee div.img {
-                width: 100%;
-                height: 300%;
-                background-image: url(../pictures/cafe.png);
-                background-size: contain;
-                background-repeat: repeat-y;
-                z-index: 4;
-                translate: 0;
-                translate: 0 4%;
-                transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            }
+                section#leite.visible section.leite aside.imgcontainer div.img {
+                    animation: pop 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+                }
 
-            section#cafe+div.lido {
-                background-color: transparent;
-            }
+                @keyframes pop {
+                    0% {
+                        scale: 1;
+                    }
 
-        }
+                    50% {
+                        scale: 1.3;
+                    }
 
+                    100% {
+                        scale: 1;
+                    }
+                }
 
-        @layer leite {
-            section#leite {
-                height: 110vh;
-                background-color: #d8c8c2;
-                z-index: 1;
-                overflow: hidden;
-                display: flex;
-                justify-content: space-around;
-                box-shadow: 0px -5px 20px rgba(0, 0, 0, 0.321);
-            }
-
-            section#leite section.leite {
-                float: left;
-                display: flex;
-                align-items: center;
-                height: 100%;
-                width: 40%;
-            }
-
-            section#leite section.leite aside.imgcontainer {
-                filter: grayscale(45%);
-            }
-
-            section#leite section.leite aside.imgcontainer div.img {
-                width: 300px;
-                height: 300px;
-                border-radius: 20px;
-                box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.253);
-                overflow: hidden;
-                transition: .8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            }
-
-            section#leite.visible section.leite aside.imgcontainer div.img {
-                animation: pop 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
-            }
-
-            @keyframes pop {
-                0% {
+                section#leite section.leite aside.imgcontainer img {
+                    width: 100%;
                     scale: 1;
+                    transition: .8s cubic-bezier(0.455, 0.03, 0.515, 0.955);
                 }
 
-                50% {
-                    scale: 1.3;
+                section#leite section.leite aside.imgcontainer:hover img {
+                    scale: 1.2;
                 }
 
-                100% {
-                    scale: 1;
+                section#leite section.leite aside.imgcontainer div.img:hover {
+                    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.343);
                 }
+
             }
 
-            section#leite section.leite aside.imgcontainer img {
-                width: 100%;
-                scale: 1;
-                transition: .8s cubic-bezier(0.455, 0.03, 0.515, 0.955);
-            }
+            @layer whey {
+                section#whey {
+                    height: 100vh;
+                    background-color: #c9af7e4d;
+                    z-index: 1;
+                    overflow: hidden;
+                    box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.15);
+                }
 
-            section#leite section.leite aside.imgcontainer:hover img {
-                scale: 1.2;
-            }
+                section#whey section.whey {
+                    float: left;
+                    display: flex;
+                    align-items: center;
+                    height: 100vh;
+                    width: 40%;
+                }
 
-            section#leite section.leite aside.imgcontainer div.img:hover {
-                box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.343);
-            }
+                section#whey section.whey aside.imgcontainer div.img {
+                    background-image: url(../pictures/whey.png);
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position-x: center;
+                    background-position-y: center;
+                    width: 100%;
+                    height: 100%;
+                    background-attachment: fixed;
+                    scale: 0.8;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
 
+                section#whey section.whey aside.imgcontainer {
+                    filter: grayscale(45%);
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+            }
         }
 
-        @layer whey {
-            section#whey {
-                height: 100vh;
-                background-color: #c9af7e4d;
-                z-index: 1;
-                overflow: hidden;
-                box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.15);
-            }
-
-            section#whey section.whey {
-                float: left;
-                display: flex;
-                align-items: center;
-                height: 100vh;
-                width: 40%;
-            }
-
-            section#whey section.whey aside.imgcontainer div.img {
-                background-image: url(../pictures/whey.png);
-                background-size: contain;
-                background-repeat: no-repeat;
-                background-position-x: center;
-                background-position-y: center;
-                width: 100%;
-                height: 100%;
-                background-attachment: fixed;
-                scale: 0.8;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-
-            section#whey section.whey aside.imgcontainer {
-                filter: grayscale(45%);
-                width: 100%;
-                height: 100%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-
-        }
     }
-
 }
+
+
 
 @layer open {
     div.open {
@@ -552,7 +552,7 @@
         translate: 0 -2px;
         animation: seta 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
     }
-    
+
 
     @keyframes seta {
         0% {
@@ -585,13 +585,14 @@
         opacity: 0;
         transition: 1.5s cubic-bezier(0.175, 0.885, 0.32, 1);
     }
-    
+
 }
 
 @layer close {
     section#whey {
         position: relative;
     }
+
     div.close {
         position: absolute;
         bottom: 1.5%;
@@ -609,7 +610,7 @@
         rotate: 180deg;
         animation: seta 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite;
     }
-    
+
 
     @keyframes seta {
         0% {
@@ -644,7 +645,7 @@
         opacity: 0;
         transition: 1.5s cubic-bezier(0.175, 0.885, 0.32, 1);
     }
-    
+
 }
 
 @layer return {

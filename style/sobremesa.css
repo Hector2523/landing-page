@@ -1,0 +1,11 @@
+
+@layer sobremesa_conteinr {
+
+    .sobremesas_conteiner {
+        background-color: #D0F0C0;
+    }
+
+    .img_icecream {
+        width: 100%;
+    }
+}

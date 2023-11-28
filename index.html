@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/media.css">
+    <link rel="stylesheet" href="./style/sobremesa.css">
     <link rel="shortcut icon" href="favicon/king lunch.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css3?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/chevron-double-down.css' rel='stylesheet'>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <title>King Lunch</title>
 </head>
+
 <body>
     <div id="load">
         <div class="loading"></div>
@@ -30,8 +34,9 @@
             <menu>
                 <a href="#" onclick="home()">Home</a>
                 <a href="#" onclick="sobre()">Sobre</a>
-                <a href="#" class="ingredientes" onmouseover="display()" onmouseout="second()"><span class="material-symbols-outlined">
-                    keyboard_arrow_up
+                <a href="#" class="ingredientes" onmouseover="display()" onmouseout="second()"><span
+                        class="material-symbols-outlined">
+                        keyboard_arrow_up
                     </span>Categorias</a>
                 <ul class="drop" onmouseover="display()" onmouseout="second()">
                     <li class="li1" onclick="cafe()">Café</li>
@@ -41,56 +46,84 @@
             </menu>
         </section>
         <main>
-            <section id="chumbadao">
-                <section id="sobre">
-                    <section class="apresentaçao" id="animationOne">
-                        <aside class="img">
-                            <h1>Sobre</h1>
-                            <img src="https://www.guiadasemana.com.br/contentFiles/image/opt_w1280h960/2019/06/FEA/61755_shutterstock-180915209.jpg">
-                        </aside>
-                        <aside class="conteudo">
-                            <h1>Chumbadão</h1>
-                            <p>O “Chumbadão" é uma vitamina desenvolvida por estudantes do Colégio Santa Catarina, em Juiz de Fora (MG), com a finalidade de realizarem um trabalho escolar de matemática.</p>
-                        </aside>
-                        <div class="open" onclick="openChumbado()">
-                            <i class="gg-chevron-double-down"></i>
-                            <p>Clique para saber mais</p>
-                        </div>
-                    </section>
-                </section>
-        
-                <section id="chumbado">
-                    <section id="cafe">
-        
-                        <section class="container">
-                            <div class="coffee" >
-                                <div class="img" id="cafeimg">
-                                    <!--imagem-->
-                                </div>
+            <section id="vitaminas">
+
+                <section id="chumbadao">
+                    <section id="sobre">
+                        <section class="apresentaçao" id="animationOne">
+                            <aside class="img">
+                                <h1>Vitaminas: <br> Chumbadão</h1>
+                                <img
+                                    src="https://www.guiadasemana.com.br/contentFiles/image/opt_w1280h960/2019/06/FEA/61755_shutterstock-180915209.jpg">
+                            </aside>
+                            <aside class="conteudo">
+                                <h1>Chumbadão</h1>
+                                <p>O “Chumbadão" é uma vitamina desenvolvida por estudantes do Colégio Santa Catarina,
+                                    em Juiz de Fora (MG), com a finalidade de realizarem um trabalho escolar de
+                                    matemática.</p>
+                            </aside>
+                            <div class="open" onclick="openChumbado()">
+                                <i class="gg-chevron-double-down"></i>
+                                <p>Clique para saber mais</p>
                             </div>
                         </section>
                     </section>
-                    <section id="leite">
-                        <section class="leite">
-                            <aside class="imgcontainer">
-                                <div class="img"><img src="pictures/leite.jpg" alt="leite"></div>
-                            </aside>
+                    <section id="chumbado">
+                        <section id="cafe">
+                            <section class="container">
+                                <div class="coffee">
+                                    <div class="img" id="cafeimg">
+                                        <!--imagem-->
+                                    </div>
+                                </div>
+                            </section>
                         </section>
-                        <section class="container"></section>
-                    </section>
-                    <section id="whey">
-                        <section class="whey">
-                            <aside class="imgcontainer">
-                                <div class="img"></div>
-                            </aside>
+                        <section id="leite">
+                            <section class="leite">
+                                <aside class="imgcontainer">
+                                    <div class="img"><img src="pictures/leite.jpg" alt="leite"></div>
+                                </aside>
+                            </section>
+                            <section class="container"></section>
                         </section>
-                        <section class="container"></section>
-                        <div class="close" onclick="closeChumbado()">
-                            <i class="gg-chevron-double-down"></i>
-                            <p>Clique para fechar</p>
-                        </div>
+                        <section id="whey">
+                            <section class="whey">
+                                <aside class="imgcontainer">
+                                    <div class="img"></div>
+                                </aside>
+                            </section>
+                            <section class="container"></section>
+                            <div class="close" onclick="closeChumbado()">
+                                <i class="gg-chevron-double-down"></i>
+                                <p>Clique para fechar</p>
+                            </div>
+                        </section>
                     </section>
                 </section>
+            </section>
+
+            <section class="sobremesas_conteiner">
+                <div>
+                    <h2 class="titulo_obremesas">Sobremesas</h2>
+                </div>
+                <section>
+                    <h3>
+                        sobre
+                    </h3>
+                    <img src="" alt="">
+                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. In perspiciatis aliquid labore
+                        assumenda illum sint consequuntur tenetur iste? Voluptates repellat earum at libero maiores
+                        ullam dicta beatae vero enim dolores!</p>
+                </section>
+                <div>
+                    <h4>Sr. Gelato</h4>
+                    <ul>
+                        <li>Cookies Scream</li>
+                        <li>Yorgut com morango</li>
+                        <li></li>
+                    </ul>
+                </div>
+
             </section>
             <div class="lido"></div>
         </main>
@@ -101,9 +134,13 @@
         </div>
     </section>
 
+
+
+
     <script src="js/loading.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/scroll.js"></script>
     <script src="js/chumbado.js"></script>
 </body>
+
 </html>

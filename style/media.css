@@ -18,6 +18,10 @@
         display: none;
     }
 
+    section#sobre {
+        margin-top: -40px;
+    }
+
     header section.responsive {
         width: 40px;
         height: 50px;
@@ -328,6 +332,10 @@
 
     * {
         cursor: initial;
+    }
+    
+    section#sobre {
+        margin-top: -30px;
     }
 
     /* header */
@@ -645,6 +653,10 @@
 @media only screen and (min-width: 800px) and (max-width: 999px) {
     * {
         cursor: initial;
+    }
+
+    section#sobre {
+        margin-top: -30px;
     }
 
     /* header */
