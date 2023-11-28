@@ -1,11 +1,112 @@
 
 @layer sobremesa_conteinr {
 
-    .sobremesas_conteiner {
-        background-color: #D0F0C0;
+    .fundo_sobremesa {
+        background-color: rgb(121, 121, 177);
+    }
+
+    .fundo_sobremesa h3 {
+        font-size: 3rem;
+        font-weight: 700;
+
+        margin-left: 5vw;
+        margin-bottom: 3vw;
+        margin-top: 5vh;
+
+        color: white;
+    }
+
+    .contener_title {
+        display: flex;
+        justify-content: center;
+        border-radius: 0px 0px 15px 15px;
+        background-color: rgba(162, 162, 233, 0.547);
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.115);
+        color: whitesmoke;
+    }
+
+    .contener_title h2 {
+        font-family: var(--poppins);
+        text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.144);
+    }
+
+    .titulo_obremesas {
+        font-size: 3rem;
+        font-weight: bold;
+    }
+
+    .card_content {
+        display: flex;
+        justify-content: center;
+        width: 100vw;
+    }
+
+    section.sobremesas_conteiner {
+        width: 80%;
+        display: flex;
+        justify-content: center;
+    }
+
+    section.sobremesas_conteiner div.um {
+        float: left;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    section.sobremesas_conteiner div.dois {
+        float: right;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .fundo_sobremesa h3 {
+        font-family: var(--roboto);
+        font-weight: bolder;
+    }
+
+    .card_content {
+        margin-top: 50px;
     }
 
     .img_icecream {
-        width: 100%;
+        width: 66%;
+        display: block;
+        margin: auto;
+        border-radius: 20px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.128);
+    }
+
+    .info_paragaph {
+        font-size: 1.3rem;
+        font-weight: 500;
+        font-family: var(--poppins);
+        color: white; 
+    }
+
+    .spam_title {
+        color: rgba(172, 255, 47, 0.438);
+        font-size: 3.7rem;
+        font-family: var(--fontedois);
+        font-weight: 700;
+
+        margin-top: 10px;
+    }
+
+    .list_components {
+        color: white;
+        font-family: var(--poppins) ;
+        font-weight: 400;
+        font-size: 1.7rem;
+    }
+
+    .list_components li{
+        margin-bottom: 4rem;
+    }
+
+    .sobremesas_conteiner {
+        display: flex;
     }
 }

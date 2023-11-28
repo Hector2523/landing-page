@@ -98,7 +98,6 @@ function cafeVisivel() {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
                 secaoObservada.classList.add('visible');
-                document.querySelector(".lido").style.backgroundColor = "#92675C";
                 if (animationIsTrue == true) {
                     animationIsTrue = false;
 
@@ -112,7 +111,6 @@ function cafeVisivel() {
 
             } else {
                 secaoObservada.classList.remove('visible');
-                document.querySelector(".lido").style.backgroundColor = "#ddaa77";
                 if (animationIsTrue == false) {
                     document.getElementById("cafeimg").style.translate = "0% 4%";
                 }
@@ -134,10 +132,8 @@ function leiteVisivel() {
         entries.forEach((entry) => {
             if (entry.isIntersecting && entry.intersectionRatio >= 0) {
                 secaoObservada.classList.add('visible');
-                document.querySelector(".lido").style.backgroundColor = "rgb(191, 220, 235)";
             } else {
                 secaoObservada.classList.remove('visible');
-                document.querySelector(".lido").style.backgroundColor = "#ddaa77";
             }
         });
     }, { threshold: 0 });
@@ -156,10 +152,8 @@ function wheyVisivel() {
         entries.forEach((entry) => {
             if (entry.isIntersecting && entry.intersectionRatio >= 0.6) {
                 secaoObservada.classList.add('visible');
-                document.querySelector(".lido").style.backgroundColor = "rgb(114, 111, 111)";
             } else {
                 secaoObservada.classList.remove('visible');
-                document.querySelector(".lido").style.backgroundColor = "#ddaa77";
             }
         });
     }, { threshold: 0.6 });
@@ -170,6 +164,26 @@ function wheyVisivel() {
 
 window.addEventListener('load', wheyVisivel);
 window.addEventListener('scroll', wheyVisivel);
+
+function sobremesaVisivel() {
+    const secaoObservada = document.querySelector('.fundo_sobremesa');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                secaoObservada.classList.add('visible');
+            } else {
+                secaoObservada.classList.remove('visible');
+            }
+        });
+    });
+
+    observer.observe(secaoObservada);
+
+}
+
+window.addEventListener('load', sobremesaVisivel);
+window.addEventListener('scroll', sobremesaVisivel);
 
 var isClickEnabled = true;
 
