@@ -5,10 +5,10 @@ var b2 = document.querySelector(".b2");
 var b3 = document.querySelector(".b3");
 
 
-responsive.addEventListener("click", function() {
+responsive.addEventListener("click", function () {
 
     let menu = document.querySelector(".menu");
-    
+
 
     menu.classList.toggle("menuactive");
 
@@ -24,8 +24,8 @@ responsive.addEventListener("click", function() {
 });
 
 
-window.addEventListener("scroll", function() {
-    
+window.addEventListener("scroll", function () {
+
     if (active) {
         let menu = document.querySelector(".menu");
 
