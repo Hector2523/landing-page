@@ -18,6 +18,21 @@ function vitaminas() {
     document.getElementById("vitaminas").scrollIntoView();
 }
 
+function sucos() {
+    document.getElementById("sucos").scrollIntoView();
+}
+
+function sanduiches() {
+    document.getElementById("sanduiches").scrollIntoView();
+}
+
+function display() {
+    document.querySelector('.drop').style.display = 'block';
+}
+
+function second() {
+    document.querySelector('.drop').style.display = 'none';
+}
 
 function adicionarClasseQuandoVisivel() {
     const secaoObservada = document.querySelector('#animationOne');
