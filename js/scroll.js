@@ -7,41 +7,17 @@ function home() {
 }
 
 function sobre() {
-    let sobre = document.getElementById("sobre");
+    let sobre = document.getElementById("Langs");
 
     if (sobre) {
         sobre.scrollIntoView();
     }
 }
 
-
-function cafe() {
-    setTimeout(scrollCafe, 700)
-
-    function scrollCafe() {
-        document.getElementById("cafe").scrollIntoView();
-    }
-
+function vitaminas() {
+    document.getElementById("vitaminas").scrollIntoView();
 }
 
-function leite() {
-    setTimeout(scrollLeite, 700);
-
-    function scrollLeite() {
-        document.getElementById("leite").scrollIntoView();
-    }
-
-}
-
-function whey() {
-
-    setTimeout(scrollWhey, 700);
-
-    function scrollWhey() {
-        document.getElementById("whey").scrollIntoView();
-    }
-
-}
 
 function adicionarClasseQuandoVisivel() {
     const secaoObservada = document.querySelector('#animationOne');
