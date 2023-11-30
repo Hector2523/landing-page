@@ -814,7 +814,7 @@
         }
 
         section#taylor aside.conteudo p {
-            color: rgb(204, 67, 42);
+            color: whitesmoke;
             font-family: var(--poppins);
             font-weight: 600;
             text-align: center;
@@ -885,20 +885,6 @@
         }
     }
 
-}
-
-@layer tecnologias {
-    @layer config {
-        section#tecnologias {
-            height: 100vh;
-        }
-
-        section#tecnologias > h1 {
-            font-family: var(--poppins);
-            font-size: 2em;
-            margin-left: 20px;
-        }
-    }
 }
 
 @layer open {

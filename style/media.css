@@ -205,9 +205,28 @@
         width: 200px;
         height: 200px;
     }
+
+    section#tecnologias section.all {
+        max-width: 100%;
+    }
+
+    section#tecnologias section.all aside.js, section#tecnologias section.all aside.html, section#tecnologias section.all aside.css {
+        width: 95%;
+        margin: auto;
+    }
 }
 
 @media only screen and (max-width: 600px) {
+
+    
+    section#tecnologias section.all {
+        max-width: 100%;
+    }
+
+    section#tecnologias section.all aside.js, section#tecnologias section.all aside.html, section#tecnologias section.all aside.css {
+        width: 95%;
+        margin: auto;
+    }
 
     * {
         cursor: initial;
@@ -754,6 +773,16 @@
 }
 
 @media only screen and (min-width: 601px) and (max-width: 800px) {
+
+    
+    section#tecnologias section.all {
+        max-width: 100%;
+    }
+
+    section#tecnologias section.all aside.js, section#tecnologias section.all aside.html, section#tecnologias section.all aside.css {
+        width: 95%;
+        margin: auto;
+    }
 
 
     * {
