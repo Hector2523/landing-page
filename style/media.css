@@ -1225,7 +1225,7 @@
 
 }
 
-@media only screen and (min-width: 800px) and (max-width: 999px) {
+@media only screen and (min-width: 800px) and (max-width: 1056px) {
     * {
         cursor: initial;
     }
@@ -1497,7 +1497,6 @@
     }
 
     section#taylor aside.conteudo p {
-        color: rgb(204, 67, 42);
         font-family: var(--poppins);
         font-weight: 600;
         text-align: center;
@@ -1512,6 +1511,16 @@
         font-family: var(--poppins);
         font-weight: 600;
         color: #D1CEB8;
+    }
+
+    section#sanduiches > h1 {
+        display: block;
+        width: 100%;
+        font-family: var(--poppins);
+        font-size: 2em;
+        text-align: left;
+        color: rgb(235, 212, 181);
+        margin-left: 10px;
     }
 
 
