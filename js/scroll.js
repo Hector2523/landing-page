@@ -26,6 +26,10 @@ function sanduiches() {
     document.getElementById("sanduiches").scrollIntoView();
 }
 
+function sobremesas() {
+    document.querySelector(".fundo_sobremesa").scrollIntoView();
+}
+
 function display() {
     document.querySelector('.drop').style.display = 'block';
 }

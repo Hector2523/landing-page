@@ -26,6 +26,185 @@
         width: 100%;
         justify-content: flex-start;
     }
+
+    section#sanduiches > h1 {
+        display: block;
+        font-family: var(--poppins);
+        font-size: 2em;
+        margin-left: 10px;
+        color: rgb(235, 212, 181);
+    }
+
+    section#taylor aside.img {
+        clear: both;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    section#taylor aside.img h1 {
+        font-size: 2em;
+        margin: 5px 0px;
+    }
+
+    section#taylor aside.conteudo {
+        width: 100%;
+        clear: both;
+        display: block;
+        height: 100vh;
+        margin: auto;
+        text-align: center;
+    }
+
+    section#taylor {
+        height: 100vh;
+        width: 100vw;
+        display: block;
+        background-color: #619c61;
+        margin: auto;
+    }
+
+    section#romeu section.romeu {
+        z-index: 3;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    section#romeu aside.img {
+        z-index: 3;
+        float: left;
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    section#romeu aside.img h1 {
+        font-size: 2.1em;
+        margin-top: 30px;
+    }
+
+    section#romeu aside.img p {
+        width: 100%;
+        font-size: 1.2em;
+        font-family: var(--poppins);
+        font-weight: 600;
+        color: #D1CEB8;
+    }
+
+    .fundo_sobremesa h3 {
+        font-size: 2em;
+        font-weight: 700;
+        margin-left: 5vw;
+        margin-bottom: 3vw;
+        margin-top: 5vh;
+        color: white;
+    }
+
+    h2.titulo_obremesas {
+        font-size: 2.5em;
+    }
+
+    section.sobremesas_conteiner div.um {
+        clear: both;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    section.sobremesas_conteiner div.dois {
+        clear: both;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    section.sobremesas_conteiner {
+        width: 90%;
+        display: block;
+        margin: auto;
+    }
+
+    section.menu menu ul {
+        margin: 0;
+        padding: 0;
+        margin-left: -10px;
+    }
+
+    section#cafe aside.container {
+        float: right;
+        width: 60%;
+        height: 100vh;
+        font-family: var(--poppins);
+        font-size: 1.2em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: rgb(201, 196, 196);
+    }
+
+    section#whey aside.container {
+        clear: both;
+        width: 90%;
+        display: block;
+        margin: auto;
+    }
+
+    section#whey aside.container h3 {
+        font-family: var(--poppins);
+        font-size: 1.2em;
+        color: rgb(49, 47, 47);
+        width: 100%;
+        display: block;
+        margin: auto;
+    }
+
+    section#leite {
+        height: 100vh;
+        background-color: #d8c8c2;
+        z-index: 1;
+        overflow: hidden;
+        display: block;
+        box-shadow: 0px -5px 20px rgba(0, 0, 0, 0.321);
+    }
+
+    section#leite section.leite {
+        clear: both;
+        display: flex;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+    }
+
+    section#leite section.leite {
+        clear: both;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    section#leite aside.container {
+        clear: both;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    section#leite aside.container h3 {
+        clear: both;
+        width: 100%;
+        font-size: 1.3em;
+    }
+
+    section#leite section.leite aside.imgcontainer div.img {
+        width: 200px;
+        height: 200px;
+    }
 }
 
 @media only screen and (max-width: 600px) {
@@ -362,9 +541,217 @@
         justify-content: flex-start;
     }
 
+    section#sanduiches > h1 {
+        display: block;
+        font-family: var(--poppins);
+        font-size: 2em;
+        margin-left: 10px;
+        color: rgb(235, 212, 181);
+    }
+
+    section#taylor aside.img {
+        clear: both;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    section#taylor aside.img h1 {
+        font-size: 2em;
+        margin: 5px 0px;
+    }
+
+    section#taylor aside.conteudo {
+        width: 100%;
+        clear: both;
+        display: block;
+        height: 100vh;
+        margin: auto;
+        text-align: center;
+    }
+
+    section#taylor {
+        height: 100vh;
+        width: 100vw;
+        display: block;
+        background-color: #619c61;
+        margin: auto;
+    }
+
+    section#romeu section.romeu {
+        z-index: 3;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    section#romeu aside.img {
+        z-index: 3;
+        float: left;
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    section#romeu aside.img h1 {
+        font-size: 2.1em;
+        margin-top: 30px;
+    }
+
+    section#romeu aside.img p {
+        width: 100%;
+        font-size: 1.2em;
+        font-family: var(--poppins);
+        font-weight: 600;
+        color: #D1CEB8;
+    }
+
+    section#taylor aside.img img {
+        width: 60%;
+    }
+    
+    .fundo_sobremesa h3 {
+        font-size: 2em;
+        font-weight: 700;
+        margin-left: 5vw;
+        margin-bottom: 3vw;
+        margin-top: 5vh;
+        color: white;
+    }
+
+    h2.titulo_obremesas {
+        font-size: 2.5em;
+    }
+
+    section.sobremesas_conteiner div.um {
+        clear: both;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    section.sobremesas_conteiner div.dois {
+        clear: both;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    section.sobremesas_conteiner {
+        width: 90%;
+        display: block;
+        margin: auto;
+    }
+
+    section.menu menu ul {
+        margin: 0;
+        padding: 0;
+        margin-left: -10px;
+    }
+
+    section#sanduiches > h1 {
+        display: block;
+        width: 100%;
+        font-family: var(--poppins);
+        font-size: 2.5em;
+        text-align: left;
+        color: rgb(235, 212, 181);
+    }
+
+    .img_icecream {
+        width: 66%;
+        display: block;
+        margin: auto;
+        border-radius: 20px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.128);
+    }
+
+    section#cafe aside.container {
+        float: right;
+        width: 60%;
+        height: 100vh;
+        font-family: var(--poppins);
+        font-size: 1em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: rgb(201, 196, 196);
+    }
+
+    section#cafe aside.container {
+        float: right;
+        width: 60%;
+        height: 100vh;
+        font-family: var(--poppins);
+        font-size: 1.2em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: rgb(201, 196, 196);
+    }
+
+    section#whey aside.container {
+        clear: both;
+        width: 100%;
+        display: block;
+        margin: auto;
+    }
+
+    section#whey aside.container h3 {
+        font-family: var(--poppins);
+        font-size: 1.2em;
+        color: rgb(49, 47, 47);
+        width: 100%;
+        display: block;
+        margin: auto;
+    }
+
+    section#leite {
+        height: 100vh;
+        background-color: #d8c8c2;
+        z-index: 1;
+        overflow: hidden;
+        display: block;
+        box-shadow: 0px -5px 20px rgba(0, 0, 0, 0.321);
+    }
+
+    section#leite section.leite {
+        clear: both;
+        display: block;
+        height: min-content;
+        width: 100%;
+    }
+
+    section#leite section.leite {
+        clear: both;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    section#leite aside.container {
+        clear: both;
+        width: 90%;
+        display: block;
+        margin: auto;
+    }
+
+    section#leite aside.container h3 {
+        clear: both;
+        width: 100%;
+        font-size: 1.3em;
+    }
+
+    section#leite section.leite aside.imgcontainer div.img {
+        width: 200px;
+        height: 200px;
+    }
+
 }
-
-
 
 @media only screen and (min-width: 601px) and (max-width: 800px) {
 
@@ -704,6 +1091,109 @@
         justify-content: flex-start;
     }
 
+    section#romeu aside.img p {
+        width: 80%;
+        font-size: 1.2em;
+        font-family: var(--poppins);
+        font-weight: 600;
+        color: #D1CEB8;
+    }
+
+    section#taylor aside.img h1 {
+        font-size: 2.4em;
+    }
+
+    section#taylor aside.conteudo {
+        height: 80%;
+    }
+
+    section#sanduiches > h1 {
+        display: block;
+        width: 100%;
+        font-family: var(--poppins);
+        font-size: 2.5em;
+        text-align: left;
+        color: rgb(235, 212, 181);
+        margin-left: 10px;
+    }
+
+    .img_icecream {
+        width: 66%;
+        display: block;
+        margin: auto;
+        border-radius: 20px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.128);
+    }
+
+    section#cafe aside.container {
+        float: right;
+        width: 60%;
+        height: 100vh;
+        font-family: var(--poppins);
+        font-size: 1.2em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: rgb(201, 196, 196);
+    }
+
+    section#whey aside.container {
+        clear: both;
+        width: 100%;
+        display: block;
+        margin: auto;
+    }
+
+    section#whey aside.container h3 {
+        font-family: var(--poppins);
+        font-size: 1.2em;
+        color: rgb(49, 47, 47);
+        width: 100%;
+        display: block;
+        margin: auto;
+    }
+
+    section#leite {
+        height: 100vh;
+        background-color: #d8c8c2;
+        z-index: 1;
+        overflow: hidden;
+        display: block;
+        box-shadow: 0px -5px 20px rgba(0, 0, 0, 0.321);
+    }
+
+    section#leite section.leite {
+        clear: both;
+        display: block;
+        height: min-content;
+        width: 100%;
+    }
+
+    section#leite section.leite {
+        clear: both;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    section#leite aside.container {
+        clear: both;
+        width: 90%;
+        display: block;
+        margin: auto;
+    }
+
+    section#leite aside.container h3 {
+        clear: both;
+        width: 100%;
+        font-size: 1.3em;
+    }
+
+    section#leite section.leite aside.imgcontainer div.img {
+        width: 200px;
+        height: 200px;
+    }
+
 }
 
 @media only screen and (min-width: 800px) and (max-width: 999px) {
@@ -924,5 +1414,76 @@
         width: 100%;
         justify-content: flex-start;
     }
+
+    section#taylor {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        background-color: #619c61;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    section#taylor aside.img {
+        float: left;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    section#taylor aside.img h1 {
+        font-family: var(--poppins);
+        margin-bottom: 10px;
+        margin: 0;
+        font-size: 3rem;
+        text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.287);
+        color: #FFFFE0;
+    }
+
+    section#taylor aside.img img {
+        width: 80%;
+        border-radius: 15px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.361);
+    }
+
+    section#taylor aside.conteudo {
+        width: 50%;
+        float: right;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+
+    section#taylor aside.conteudo h1 {
+        margin: 0;
+        margin-bottom: 5px;
+        font-size: 2.5rem;
+        font-family: var(--poppins);
+        color: #f7d551;
+        text-transform: uppercase;
+        text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.247);
+    }
+
+    section#taylor aside.conteudo p {
+        color: rgb(204, 67, 42);
+        font-family: var(--poppins);
+        font-weight: 600;
+        text-align: center;
+        font-size: 1.5em;
+        margin: 0;
+        text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.125);
+    }
+
+    section#romeu aside.img p {
+        width: 80%;
+        font-size: 1.2em;
+        font-family: var(--poppins);
+        font-weight: 600;
+        color: #D1CEB8;
+    }
+
 
 }

@@ -8,11 +8,9 @@
     .fundo_sobremesa h3 {
         font-size: 3rem;
         font-weight: 700;
-
         margin-left: 5vw;
         margin-bottom: 3vw;
         margin-top: 5vh;
-
         color: white;
     }
 
@@ -48,18 +46,9 @@
     }
 
     section.sobremesas_conteiner div.um {
-        float: left;
-        width: 50%;
-        display: flex;
-        flex-direction: column;
-    }
-
-    section.sobremesas_conteiner div.dois {
-        float: right;
-        width: 50%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        width: 100%;
+        display: block;
+        margin: auto;
     }
 
     .fundo_sobremesa h3 {
@@ -72,7 +61,7 @@
     }
 
     .img_icecream {
-        width: 66%;
+        width: 36%;
         display: block;
         margin: auto;
         border-radius: 20px;

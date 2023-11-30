@@ -250,8 +250,8 @@
 
             @layer sobre {
 
-                
-                
+
+
                 section#sobre {
                     display: flex;
                     overflow-x: hidden;
@@ -488,6 +488,13 @@
                     }
                 }
 
+                section#leite section.leite {
+                    float: left;
+                    width: 50%;
+                    display: flex;
+                    justify-content: center;
+                }
+
                 section#leite section.leite aside.imgcontainer img {
                     width: 100%;
                     scale: 1;
@@ -500,6 +507,23 @@
 
                 section#leite section.leite aside.imgcontainer div.img:hover {
                     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.343);
+                }
+
+                section#leite aside.container {
+                    float: right;
+                    width: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                section#leite aside.container h3 {
+                    font-family: var(--poppins);
+                    font-size: 1.8em;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: rgb(49, 47, 47);
                 }
 
             }
@@ -543,6 +567,24 @@
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                }
+
+                section#whey aside.container {
+                    float: right;
+                    width: 50%;
+                    height: 80vh;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                section#whey aside.container h3 {
+                    font-family: var(--poppins);
+                    font-size: 1.8em;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: rgb(49, 47, 47);
                 }
 
             }
@@ -590,7 +632,7 @@
             max-width: 40%;
         }
 
-        section#bananapower > section {
+        section#bananapower>section {
             max-width: 95%;
             margin: auto;
             padding-top: 5px;
@@ -635,7 +677,7 @@
         margin-bottom: 10px;
     }
 
-    section#sucos .suco > aside {
+    section#sucos .suco>aside {
         width: 90%;
         display: flex;
         justify-content: flex-start;
@@ -643,12 +685,12 @@
         height: 100vh;
     }
 
-    section#sucos .suco.strangedrink > aside div.um {
+    section#sucos .suco.strangedrink>aside div.um {
         float: left;
         width: 50%;
     }
 
-    section#sucos .suco.strangedrink > aside div.dois {
+    section#sucos .suco.strangedrink>aside div.dois {
         float: right;
         width: 50%;
         display: flex;
@@ -656,7 +698,7 @@
         justify-content: center;
     }
 
-    section#sucos .suco > aside div.dois img {
+    section#sucos .suco>aside div.dois img {
         width: 70%;
         border-radius: 20px;
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.253);
@@ -673,7 +715,7 @@
         background-color: #70C3D5;
     }
 
-    section#sucos .suco.relaxdrink > aside div.um {
+    section#sucos .suco.relaxdrink>aside div.um {
         float: left;
         width: 50%;
         display: flex;
@@ -681,11 +723,11 @@
         justify-content: center;
     }
 
-    section#sucos .suco.relaxdrink > aside div.um img {
+    section#sucos .suco.relaxdrink>aside div.um img {
         width: 80%;
     }
 
-    section#sucos .suco.relaxdrink > aside div.dois {
+    section#sucos .suco.relaxdrink>aside div.dois {
         float: right;
         width: 50%;
         display: flex;
@@ -708,7 +750,7 @@
             overflow-x: hidden;
         }
 
-        section#sanduiches > h1 {
+        section#sanduiches>h1 {
             display: flex;
             width: 28%;
             font-family: var(--poppins);
@@ -842,7 +884,21 @@
             color: #D1CEB8;
         }
     }
-    
+
+}
+
+@layer tecnologias {
+    @layer config {
+        section#tecnologias {
+            height: 100vh;
+        }
+
+        section#tecnologias > h1 {
+            font-family: var(--poppins);
+            font-size: 2em;
+            margin-left: 20px;
+        }
+    }
 }
 
 @layer open {

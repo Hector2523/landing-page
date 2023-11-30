@@ -1,7 +1,7 @@
 var time = document.querySelector(".time");
 var load = document.getElementById("load");
 
-setTimeout(loading, 0);
+setTimeout(loading, 3500);
 
 function loading() {
     load.style.opacity = "0";
